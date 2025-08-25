@@ -1,13 +1,104 @@
 <!doctype html>
-<html lang="zh-Hant">
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Hello GitHub Pages</title>
-  <style>body{font:16px/1.6 system-ui;margin:3rem;}</style>
+    <style>
+        body {
+            background-color: #112;
+            color: silver;
+        }
+
+        a {
+            text-decoration: none;
+            color: cyan;
+        }
+
+            a:hover {
+                color: pink;
+                text-decoration: none;
+            }
+    </style>
 </head>
+
 <body>
-  <h1>你好，GitHub Pages</h1>
-  <p>這是一個最小可用的靜態頁面。</p>
+    <meta charset="utf-8">
+    <div class="entryContainer">
+        <h1>BluySky #indiedev Gallary</h1>
+        <ul id="date-list">
+            
+                        <li>
+                            <a href="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/GallaryPages/2025/07/BluySky_indiedev_2025_07_01.html">
+                                <span>
+            
+                                    2025-07-01
+            
+                                </span>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/GallaryPages/2025/07/BluySky_indiedev_2025_07_02.html">
+                                <span>
+            
+                                    2025-07-02
+            
+                                </span>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/GallaryPages/2025/07/BluySky_indiedev_2025_07_03.html">
+                                <span>
+            
+                                    2025-07-03
+            
+                                </span>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/GallaryPages/2025/07/BluySky_indiedev_2025_07_04.html">
+                                <span>
+            
+                                    2025-07-04
+            
+                                </span>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/GallaryPages/2025/07/BluySky_indiedev_2025_07_05.html">
+                                <span>
+            
+                                    2025-07-05
+            
+                                </span>
+                            </a>
+                        </li>
+                   
+                      
+                        
+        </ul>
+    </div>
+
+
+
+
+
+    <script>
+        
+        const userLang = navigator.language || "en-US";
+
+        const formatter = new Intl.DateTimeFormat(userLang, {
+            dateStyle: "long" 
+        });
+
+        document.querySelectorAll("#date-list span").forEach(span => {
+            const rawDate = span.textContent.trim();
+            const date = new Date(rawDate);
+            if (!isNaN(date)) {
+                span.textContent = formatter.format(date);
+            }
+        });
+    </script>
 </body>
 </html>
