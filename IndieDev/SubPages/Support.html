@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+
+<head>
+    <script>
+        document.addEventListener("DOMContentLoaded", function ()
+        {
+            // 取得使用者瀏覽器語言
+            let userLang = navigator.language || navigator.userLanguage;
+            userLang = userLang.toLowerCase();
+
+            // 判斷語言 (可自己加更多條件)
+            let lang = "en";
+            if (userLang.startsWith("zh")) lang = "zh";
+            else if (userLang.startsWith("ja")) lang = "ja";
+            else if (userLang.startsWith("ko")) lang = "ko";
+
+            // 套用 CSS active class
+            document.querySelectorAll("[data-lang]").forEach(el =>
+            {
+                if (el.getAttribute("data-lang") === lang)
+                {
+                    el.classList.add("active");
+                }
+            });
+        });
+    </script>
+    <style>
+        body {
+            background-color: #112;
+            text-align: center;
+
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        img {
+            max-width: 400px;
+        }
+
+        [data-lang] {
+            display: none;
+            /* 預設先隱藏所有語言 */
+        }
+
+        [data-lang].active {
+            display: block;
+            /* JS 選中的語言才顯示 */
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/Resources/Images/CatThumbUp.png" />
+        <div style="color: silver">
+            <div data-lang="en">
+                <div>We don't have that kind of stuff,</div>
+                <div>but <span style="font-size: large;">You are awesome!</span></div>
+            </div>
+            <div data-lang="zh">
+                <div>那玩意儿我们可没有，</div>
+                <div>不过 <span style="font-size: large;">你真牛！</span></div>
+            </div>
+
+            <div data-lang="ja">
+                <div>そんなものはうちにはないけど、</div>
+                <div>でも <span style="font-size: large;">君、最強！</span></div>
+            </div>
+
+            <div data-lang="ko">
+                <div>그런 건 우리한테 없지만,</div>
+                <div>근데 <span style="font-size: large;">너 진짜 쩐다!</span></div>
+            </div>
+        </div>
+        <a href="index.html">Home</a>
+    </div>
+</body>
+
+</html>
