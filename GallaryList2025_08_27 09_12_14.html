@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: #112;
+            color: silver;
+        }
+
+        a {
+            text-decoration: none;
+            color: cyan;
+        }
+
+            a:hover {
+                color: pink;
+                text-decoration: none;
+            }
+    </style>
+</head>
+
+<body>
+    <meta charset="utf-8">
+    <div class="entryContainer">
+        <h1>BlueSky #indiedev Gallery</h1>
+        <ul id="date-list">
+            
+                        <li>
+                            <a href="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/GallaryPages/2025/07/BlueSky_indiedev_2025_07_09.html">
+                                <span>
+            
+                                    2025-07-09
+            
+                                </span>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/GallaryPages/2025/07/BlueSky_indiedev_2025_07_10.html">
+                                <span>
+            
+                                    2025-07-10
+            
+                                </span>
+                            </a>
+                        </li>
+                        
+        </ul>
+    </div>
+
+
+
+
+
+    <script>
+       
+        const userLang = navigator.language || "en-US";
+
+     
+        const formatter = new Intl.DateTimeFormat(userLang, {
+            dateStyle: "long" 
+        });
+
+      
+        document.querySelectorAll("#date-list span").forEach(span => {
+            const rawDate = span.textContent.trim();
+            const date = new Date(rawDate);
+            if (!isNaN(date)) {
+                span.textContent = formatter.format(date);
+            }
+        });
+    </script>
+</body>
+</html>
