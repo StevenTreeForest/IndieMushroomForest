@@ -50,16 +50,16 @@
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-            min-height: 300px;
+            min-height: 200px;
         }
 
-            .gallery img {
-                height: auto;
-                display: block;
-                margin: 0 auto;
-                max-height: 80vh;
-                max-width: 100%;
-            }
+        .gallery img {
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            max-height: 80vh;
+            max-width: 100%;
+        }
 
 
         @media (min-width: 1000px) {
@@ -100,7 +100,10 @@
     <!--<div style="text-align:center;margin-bottom:50px;max-height:400px">
         <img src="TileMap_2025_07_10.jpg" />
     </div>-->
-
+    <!-- thumbnails tilesmap -->
+    <div style="text-align:center;margin-bottom:50px;max-height:400px">
+        <img id="img_thumbnails" src="TileMap_2025_07_02.jpg" />
+    </div>
 
 
     <div class="entryContainer">
@@ -3303,13 +3306,15 @@
     <div style="text-align: center;height:50px;">
 
         <span>
-            <a href="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/GallaryPages/2025/07/BlueSky_indiedev_2025_07_01.html" style="color: cyan;margin: 10px;">&lt;&lt; Previous</a>
+            <a  id="link_previous_page"
+               href="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/GallaryPages/2025/07/BlueSky_indiedev_2025_07_01.html" style="color: cyan;margin: 10px;">&lt;&lt; Previous</a>
         </span>
         <span>
             <a href="https://steventreeforest.github.io/IndieMushroomForest/" style="color: cyan;margin: 10px;">Home</a>
         </span>
         <span>
-            <a href="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/GallaryPages/2025/07/BlueSky_indiedev_2025_07_03.html" style="color: cyan;margin: 10px;">
+            <a id="link_next_page" 
+               href="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/GallaryPages/2025/07/BlueSky_indiedev_2025_07_03.html" style="color: cyan;margin: 10px;">
                 Next &gt;&gt;
             </a>
         </span>
@@ -3324,5 +3329,70 @@
             <img src="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/Resources/Images/paypal%20logo.png" style="max-width: 20px;border-radius: 5px;background-color: white;">
         </a>
     </div>
+
+
+
+    <!-- script -->
+    <script src="../../../Resources/jquery-3.7.1.min.js"></script>
+    <script>
+
+        /* --------------------------------------------------- */
+        function ThumbNailLinkCheck() {
+            const img = document.getElementById("img_thumbnails");
+
+
+            img.onload = function () {
+
+                $("#img_thumbnails").show();
+            };
+
+            img.onerror = function () {
+
+                $("#img_thumbnails").hide();
+            };
+
+            if (img.complete && img.naturalWidth !== 0) {
+                $("#img_thumbnails").show();
+            } else {
+                $("#img_thumbnails").hide();
+            }
+
+
+        }
+        /* --------------------------------------------------- */
+        function checkLinksExist() {
+            function hideNotExistLink(id_link) {
+                const $link_next = $("#" + id_link);
+                const url_test = $link_next.attr("href");
+
+                fetch(url_test)
+                    .then(res => {
+                        if (res.ok) {
+                            console.log("Exist ✅");
+                            $link_next.show();
+                        } else {
+                            console.log("Not Exist ❌");
+                            $link_next.hide();
+                        }
+                    })
+                    .catch(() => {
+                        $("#" + id_link).hide();
+                        console.log("Error ❌");
+                    });
+            }
+
+            hideNotExistLink("link_next_page");;
+            hideNotExistLink("link_previous_page");;
+
+
+        }
+        /* --------------------------------------------------- */
+        (function () {
+            ThumbNailLinkCheck();
+            checkLinksExist();
+        })();
+
+
+    </script>
 </body>
 </html>

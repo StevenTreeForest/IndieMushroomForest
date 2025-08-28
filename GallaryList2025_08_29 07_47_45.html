@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #112;
+            color: silver;
+            height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: cyan;
+        }
+
+            a:hover {
+                color: pink;
+                text-decoration: none;
+            }
+    </style>
+    <title>Indie Mushroom Forest</title>
+</head>
+
+<body>
+    <div class="entryContainer">
+        <h1>BlueSky #indiedev Gallery</h1>
+        <ul id="date-list">
+            
+                        <li>
+                            <a href="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/GallaryPages/2025/07/BlueSky_indiedev_2025_07_12.html">
+                                <span>
+            
+                                    2025-07-12
+            
+                                </span>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/GallaryPages/2025/07/BlueSky_indiedev_2025_07_13.html">
+                                <span>
+            
+                                    2025-07-13
+            
+                                </span>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/GallaryPages/2025/07/BlueSky_indiedev_2025_07_14.html">
+                                <span>
+            
+                                    2025-07-14
+            
+                                </span>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/GallaryPages/2025/07/BlueSky_indiedev_2025_07_15.html">
+                                <span>
+            
+                                    2025-07-15
+            
+                                </span>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/GallaryPages/2025/07/BlueSky_indiedev_2025_07_16.html">
+                                <span>
+            
+                                    2025-07-16
+            
+                                </span>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/GallaryPages/2025/07/BlueSky_indiedev_2025_07_17.html">
+                                <span>
+            
+                                    2025-07-17
+            
+                                </span>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/GallaryPages/2025/07/BlueSky_indiedev_2025_07_18.html">
+                                <span>
+            
+                                    2025-07-18
+            
+                                </span>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/GallaryPages/2025/07/BlueSky_indiedev_2025_07_19.html">
+                                <span>
+            
+                                    2025-07-19
+            
+                                </span>
+                            </a>
+                        </li>
+                        
+        </ul>
+    </div>
+
+
+
+
+
+    <script>
+       
+        const userLang = navigator.language || "en-US";
+
+     
+        const formatter = new Intl.DateTimeFormat(userLang, {
+            dateStyle: "long" 
+        });
+
+      
+        document.querySelectorAll("#date-list span").forEach(span => {
+            const rawDate = span.textContent.trim();
+            const date = new Date(rawDate);
+            if (!isNaN(date)) {
+                span.textContent = formatter.format(date);
+            }
+        });
+    </script>
+</body>
+</html>
