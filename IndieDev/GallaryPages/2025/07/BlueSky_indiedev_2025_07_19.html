@@ -61,6 +61,10 @@
             max-width: 100%;
         }
 
+        .img_thumbnails{
+            max-width:90vw;
+        }
+
 
         @media (min-width: 1000px) {
 
@@ -96,13 +100,26 @@
 <body style="Color:silver;">
     <h1 style="Color:silver;text-align: center;">BlueSky Quick Recap #indiedev 2025-07-19</h1>
 
-    <!-- thumbnails tilesmap -->
-    <!--<div style="text-align:center;margin-bottom:50px;max-height:400px">
-        <img src="TileMap_2025_07_10.jpg" />
-    </div>-->
+    <!-- navigation panel -->
+    <div style="text-align: center;height:50px;">
+        <span>
+            <a class="link_previous_page"
+               href="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/GallaryPages/2025/07/BlueSky_indiedev_2025_07_18.html" style="color: cyan;margin: 10px;">&lt;&lt; Previous</a>
+        </span>
+        <span>
+            <a href="https://steventreeforest.github.io/IndieMushroomForest/" style="color: cyan;margin: 10px;">Home</a>
+        </span>
+        <span>
+            <a class="link_next_page"
+               href="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/GallaryPages/2025/07/BlueSky_indiedev_2025_07_20.html" style="color: cyan;margin: 10px;">
+                Next &gt;&gt;
+            </a>
+        </span>
+    </div>
+
     <!-- thumbnails tilesmap -->
     <div style="text-align:center;margin-bottom:50px;max-height:400px">
-        <img id="img_thumbnails" src="TileMap_2025_07_19.jpg" />
+        <img class="img_thumbnails" src="TileMap_2025_07_19.jpg" />
     </div>
 
 
@@ -3327,20 +3344,6 @@
                 </div>
                 
                 <div class="entryDiv">
-                    <a href="https://bsky.app/profile/frolicstudio.fun/post/3ludmxkwyxk2a" target="_blank">
-                        
-                        
-                                <div class="gallery">
-                                    
-                                        <img src="https://video.bsky.app/watch/did%3Aplc%3A3y26e2x4xaipnrce3crkl3qu/bafkreicxm234dbbpkjr3wm6lwvsuttkhjhmtcop7m3ukzqw3ikdwyq5rde/thumbnail.jpg" loading="lazy">
-                                        
-                                </div>
-                
-                                
-                    </a>
-                </div>
-                
-                <div class="entryDiv">
                     <a href="https://bsky.app/profile/doomski.bsky.social/post/3ludfzx23lk2z" target="_blank">
                         
                         
@@ -3585,27 +3588,26 @@
                 <span>Time Range: </span> <span>19 Jul 2025</span>
             </li>
             <li>Total Number of Post: 653  </li>
-            <li>Number of Post Displayed: 235  </li>
+            <li>Number of Post Displayed: 234  </li>
         </ul>
     </div>
 
-    <div style="text-align: center;height:50px;">
 
+    <!-- navigation panel -->
+    <div style="text-align: center;height:50px;">
         <span>
-            <a  id="link_previous_page"
+            <a class="link_previous_page"
                href="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/GallaryPages/2025/07/BlueSky_indiedev_2025_07_18.html" style="color: cyan;margin: 10px;">&lt;&lt; Previous</a>
         </span>
         <span>
             <a href="https://steventreeforest.github.io/IndieMushroomForest/" style="color: cyan;margin: 10px;">Home</a>
         </span>
         <span>
-            <a id="link_next_page" 
+            <a class="link_next_page"
                href="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/GallaryPages/2025/07/BlueSky_indiedev_2025_07_20.html" style="color: cyan;margin: 10px;">
                 Next &gt;&gt;
             </a>
         </span>
-
-
     </div>
     <!-- Support -->
     <div style="align-self: center;align-content: center;align-items: center;text-align: right;">
@@ -3624,31 +3626,35 @@
 
         /* --------------------------------------------------- */
         function ThumbNailLinkCheck() {
-            const img = document.getElementById("img_thumbnails");
+            //const img = document.getElementById(".img_thumbnails");
+            const targetTagName = ".img_thumbnails";
+            const img = $(targetTagName);
+            console.assert(img.length > 0, "Failed: img.length>0", img);
 
 
-            img.onload = function () {
+            img.each(function () {
+                if (this.complete && this.naturalWidth !== 0) {
+                    $(targetTagName).show();
+                } else {
+                    $(targetTagName).hide();
 
-                $("#img_thumbnails").show();
-            };
+                    $(this).on("load", function () {
+                        $(targetTagName).show();
+                    });
 
-            img.onerror = function () {
+                    $(this).on("error", function () {
 
-                $("#img_thumbnails").hide();
-            };
-
-            if (img.complete && img.naturalWidth !== 0) {
-                $("#img_thumbnails").show();
-            } else {
-                $("#img_thumbnails").hide();
-            }
+                        $(targetTagName).hide();
+                    });
+                }
+            });
 
 
         }
         /* --------------------------------------------------- */
         function checkLinksExist() {
             function hideNotExistLink(id_link) {
-                const $link_next = $("#" + id_link);
+                const $link_next = $(id_link);
                 const url_test = $link_next.attr("href");
 
                 fetch(url_test)
@@ -3667,9 +3673,8 @@
                     });
             }
 
-            hideNotExistLink("link_next_page");;
-            hideNotExistLink("link_previous_page");;
-
+            hideNotExistLink(".link_next_page");;
+            hideNotExistLink(".link_previous_page");;
 
         }
         /* --------------------------------------------------- */
