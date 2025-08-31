@@ -1,0 +1,492 @@
+<!doctype html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #112;
+            min-height: 100vh;
+        }
+
+
+        .videoIcon {
+            width: 25px;
+            height: 25px;
+            color: green;
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+        }
+
+
+
+        .entryContainer {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+
+        .entryContainer>div:nth-child(odd) {
+            border: 3px solid #636316;
+        }
+
+        .entryContainer>div:nth-child(even) {
+            border: 3px solid #1d5b2a;
+        }
+
+        .entryDiv {
+            position: relative;
+            gap: 10px;
+            margin: 0px 0px;
+            padding: 10px;
+            max-width: 90vw;
+        }
+
+        .gallery {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            min-height: 200px;
+        }
+
+        .gallery img {
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            max-height: 80vh;
+            max-width: 100%;
+        }
+
+        .img_thumbnails {
+            max-width: 90vw;
+        }
+
+        .entryDiv:hover .closeIcon {
+            display: block;
+        }
+
+        .closeIcon {
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+        }
+
+        .entryDiv:hover .saveIcon {
+            display: block;
+        }
+
+        .saveIcon {
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+        }
+
+        @media (min-width: 1000px) {
+
+
+            .entryContainer {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .entryDiv {
+                max-width: auto;
+            }
+
+            .gallery {
+                min-height: 250px;
+            }
+
+            .gallery img {
+                height: auto;
+                max-width: 30vw;
+                max-height: 200px;
+                display: block;
+            }
+
+            .closeIcon {
+                display: none;
+            }
+
+            .saveIcon {
+                display: none;
+            }
+        }
+
+        .hiddenResource {
+            display: none;
+            height: 0px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1 style="Color:silver;text-align: center;">BlueSky IndieDev Saved Post</h1>
+
+
+    <!-- navigation panel -->
+    <div style="text-align: center;height:50px;">  
+        <span>
+            <a href="https://steventreeforest.github.io/IndieMushroomForest/" style="color: cyan;margin: 10px;">Home</a>
+        </span>   
+    </div>
+
+    <!-- hidden resource -->
+    <div>
+        <div class="hiddenResource">
+            <div id="Icon_Heart" style="border:1px silver solid;background:black">
+                <svg fill="Gray" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
+                    enable-background="new 0 0 24 24" xml:space="preserve">
+
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <g id="Favorite-Filled">
+                            <path
+                                d="M12,22C9.63,20.17,1,13.12,1,7.31C1,4.38,3.47,2,6.5,2c1.9,0,3.64,0.93,4.65,2.48L12,5.78l0.85-1.3 C13.86,2.93,15.6,2,17.5,2C20.53,2,23,4.38,23,7.31C23,13.15,14.38,20.18,12,22z">
+                            </path>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <svg id="icon-close" viewBox="0 0 25 25" fill="#000" xmlns="http://www.w3.org/2000/svg" stroke="#ed833d">
+                <rect width="23" height="23" fill="black"></rect>
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z"
+                        fill="#ff0000"></path>
+                </g>
+            </svg>
+            <div id="example_entryDiv" class="entryDiv">
+                <div class="closeIcon">
+                    <svg version="1.1" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00"
+                        enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                        <use href="#icon-close"></use>
+                    </svg>
+                </div>
+                <a href="https://bsky.app/profile/upchuckle.bsky.social/post/3lvhjn2davc2x" target="_blank">
+                    <div class="videoIcon">
+                        <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/"
+                            xmlns:cc="http://creativecommons.org/ns#"
+                            xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                            xmlns:svg="http://www.w3.org/2000/svg"
+                            xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                            xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg"
+                            inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00"
+                            enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"
+                            style="--darkreader-inline-stroke: var(--darkreader-text-97ff9c, #8afe8c); --darkreader-inline-fill: var(--darkreader-text-97ff9c, #8afe8c);"
+                            data-darkreader-inline-stroke="" data-darkreader-inline-fill="">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000"
+                                    strokewidth="0"
+                                    style="--darkreader-inline-fill: var(--darkreader-text-000000, #ece8e2);"
+                                    data-darkreader-inline-fill=""></rect>
+                            </g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path id="path25187" inkscape:connector-curvature="0"
+                                    d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <div class="gallery">
+                        <img
+                            src="https://video.bsky.app/watch/did%3Aplc%3Ayjafvn7w6nfpcfrei6b5bdv2/bafkreifrv75o3arqj4m774hvocxpz2xrir2ivpaduk6apwfpuwkkragziy/thumbnail.jpg">
+                    </div>
+
+
+                </a>
+            </div>
+        </div>
+
+        <!-- edit save posts-->
+        <div>
+            <div id="panel_SavedPost" class="entryContainer">
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- script -->
+    <script
+        src="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/Resources/jquery-3.7.1.min.js"></script>
+    <script>
+        const keyName_SavedPost = "SavedPost";
+        /* --------------------------------------------------- */
+        class DEF_SavedPostEntry
+        {
+            postLink = "";
+            imgLinks = [];
+        }
+        /* --------------------------------------------------- */
+        /** @return {Array<DEF_SavedPostEntry>} */
+        function getSavedPostArray()
+        {
+            try
+            {
+                let data_savedPost = JSON.parse(localStorage.getItem(keyName_SavedPost));
+
+                if (typeof data_savedPost === "undefined" || data_savedPost == null)
+                {
+                    // console.log("ddd");
+                    data_savedPost = [];
+                }
+
+                console.assert(!(typeof data_savedPost === "undefined" || data_savedPost == null)
+                    , "Failed: !(typeof data_savedPost === undefined)"
+                    , data_savedPost);
+
+                // console.log(data_savedPost);
+
+                return data_savedPost;
+            } catch (error)
+            {
+                console.error(`${error}.\n ${error.stack}`);
+            }
+        }
+        /* --------------------------------------------------- */
+        function removePostInSavedPost(link_post)
+        {
+            try
+            {
+
+                let data_savedPost = getSavedPostArray();
+
+                let data_new = [];
+
+                let found = false;
+                for (let i = 0; i < data_savedPost.length; i++)
+                {
+                    let post_now = data_savedPost[i];
+                    if (post_now.postLink != link_post)
+                    {
+                        data_new.push(post_now);
+                    }
+                }
+
+                localStorage.setItem(keyName_SavedPost, JSON.stringify(data_new));
+
+
+            } catch (error)
+            {
+                console.error(`${error}.\n ${error.stack}`);
+            }
+        }
+        /* --------------------------------------------------- */
+        function ShowSavedPost()
+        {
+            try
+            {
+                /** only work on test */
+                // return;
+                const divName_panel = "panel_SavedPost";
+                let $panel = $("#" + divName_panel);
+
+                if ($panel.length == 0)
+                {
+                    $("<div>", {
+                        id: divName_panel
+                        , class: "entryContainer"
+                    })
+                        .appendTo("body");
+                    $panel = $("#" + divName_panel);
+                    // console.log("add panel");
+                }
+
+                $panel.empty();
+
+                let data_savedPost = getSavedPostArray();
+
+                for (let index = 0; index < data_savedPost.length; index++)
+                {
+                    /** @type {DEF_SavedPostEntry} */
+                    const postData = data_savedPost[index];
+
+                    // console.log("postData", postData);
+
+                    let template = $("#example_entryDiv").clone();
+                    template.removeAttr("id");
+                    template.appendTo($panel);
+                    template.find("a").attr("href", postData.postLink);
+                    var $gallery = template.find(".gallery").empty();
+                    var $closeButton = template.find(".closeIcon");
+                    console.assert($closeButton.length == 1, "Failed: $closeButton.length==1", template);
+                    $closeButton.on("click", function ()
+                    {
+                        var $link_post = $(this).parent().find("a");
+                        console.assert($link_post.length == 1, "Failed: $link_post.length==1", $(this).parent());
+                        var href_post = $link_post.attr("href");
+                        removePostInSavedPost(href_post);
+                        ShowSavedPost();
+                    });
+
+
+                    for (let index_img = 0; index_img < postData.imgLinks.length; index_img++)
+                    {
+                        const imgUrl = postData.imgLinks[index_img];
+                        let img_new = $("<img>", { src: imgUrl })
+                            .appendTo($gallery);
+                    }
+
+                }
+
+
+            } catch (error)
+            {
+                console.error(`${error}.\n ${error.stack}`);
+            }
+        }
+        /* --------------------------------------------------- */
+        function AddSavedPost(tag_link)
+        {
+            try
+            {
+
+
+                console.assert((tag_link instanceof HTMLAnchorElement)
+                    , "Failed:  (tag_link instanceof HTMLAnchorElement)"
+                    , tag_link);
+
+                const $tag_link = $(tag_link);
+                let href = $tag_link.attr("href");
+
+
+                var $imgs = $tag_link.find("img");
+                console.assert($imgs.length > 0, "Failed: $imgs.length>0", $tag_link);
+                let imgLinks = $imgs.map(function ()
+                {
+                    return $(this).attr("src");
+                }).get();  // .get() 把 jQuery 物件轉成普通陣列
+
+                console.assert(imgLinks.length > 0, "Failed: imgLinks.length>0", $tag_link);
+
+                //var entry = { postLink: {}, imgLinks: [] };
+                var entry = new DEF_SavedPostEntry();
+                Object.preventExtensions(entry);
+                entry.postLink = href;
+                entry.imgLinks = imgLinks;
+
+
+
+                if (!(keyName_SavedPost in localStorage))
+                {
+                    localStorage.setItem(keyName_SavedPost, JSON.stringify([]));
+                }
+
+
+
+                removePostInSavedPost(entry.postLink);
+
+
+                let data_savedPost = getSavedPostArray();
+                data_savedPost.push(entry);
+
+                localStorage.setItem(keyName_SavedPost, JSON.stringify(data_savedPost));
+                ShowSavedPost();
+
+
+
+
+            } catch (error)
+            {
+                console.error(`${error}.\n ${error.stack}`);
+            }
+        }
+        /* --------------------------------------------------- */
+        function Adjust_EntryDiv()
+        {
+            try
+            {
+                var list_entryDiv = $(".entryContainer .entryDiv");
+
+
+                /** add save icon */
+                list_entryDiv.each((index) =>
+                {
+
+                    var newIcon = $("#Icon_Heart")
+                        .clone()
+                        .attr({ class: "saveIcon" })
+                        .removeAttr("id", "")
+                        .appendTo($(list_entryDiv.eq(index)));
+
+                    newIcon.on("click", function ()
+                    {
+                        $div_this = $(this);
+                        var href = $(this).parent().find("a").get(0);
+
+                        let list_savedPost = getSavedPostArray();
+                        let isSaved = false;
+                        for (let index = 0; index < list_savedPost.length; index++)
+                        {
+                            const post = list_savedPost[index];
+                            if (post.postLink == href)
+                            {
+                                isSaved = true;
+                                break;
+                            }
+                        }
+
+                        if (isSaved)
+                        {
+                            removePostInSavedPost(href);
+                            ShowSavedPost();
+                        }
+                        else
+                        {
+                            AddSavedPost(href);
+                        }
+
+
+
+                    });
+                });
+
+            } catch (error)
+            {
+                console.error(`${error}.\n ${error.stack}`);
+            }
+        }
+        /* --------------------------------------------------- */
+        (function ()
+        {
+            try
+            {
+
+                Adjust_EntryDiv();
+                ShowSavedPost();
+
+            } catch (error)
+            {
+                console.error(`${error}.\n ${error.stack}`);
+            }
+
+        })();
+
+    </script>
+
+</body>
+
+</html>
