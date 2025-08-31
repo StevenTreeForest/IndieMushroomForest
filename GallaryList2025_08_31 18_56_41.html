@@ -1,6 +1,5 @@
 <!doctype html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,10 +15,10 @@
             color: cyan;
         }
 
-        a:hover {
-            color: pink;
-            text-decoration: none;
-        }
+            a:hover {
+                color: pink;
+                text-decoration: none;
+            }
 
         .entryContainer {
             display: flex;
@@ -29,9 +28,9 @@
             align-items: flex-start;
         }
 
-        .entryContainer div {
-            margin: 0px 20px 0px 20px;
-        }
+            .entryContainer div {
+                margin: 0px 20px 0px 20px;
+            }
 
         .yearTitle {
             margin: 10px 0px;
@@ -50,12 +49,13 @@
 
 <body>
     <h1>BlueSky #indiedev Gallery</h1>
+
     <div>
         <a href="IndieDev/SubPages/BlueSky_SavedPost_Manage.html">
             Check Saved Posts
         </a>
     </div>
- 
+
     <h1 class="yearTitle">2025</h1>    
     <div class="entryContainer">    
             <div>
@@ -385,12 +385,11 @@
 
 
     <!-- Script Area -->
-    <script
-        src="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/Resources/Javascript/jquery-3.7.1.min.js"></script>
+    <script src="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/Resources/Javascript/jquery-3.7.1.min.js"></script>
     <script>
+
         /* --------------------------------------------------- */
-        (function ()
-        {
+        (function () {
             const userLang = navigator.language || "en-US";
             {
                 const formatter = new Intl.DateTimeFormat(userLang, {
@@ -398,15 +397,13 @@
                 });
                 /** convert date */
                 var allSpan = $(".date-list span");
-                allSpan.each((index) =>
-                {
+                allSpan.each((index) => {
                     const $span = allSpan.eq(index);
 
                     /** get the date info */
                     const rawDate = $span.text().trim();
                     const date = new Date(rawDate);
-                    if (!isNaN(date))
-                    {
+                    if (!isNaN(date)) {
                         // span.textContent = formatter.format(date);
                         $span.text(formatter.format(date));
                     }
@@ -422,15 +419,13 @@
                 });
                 /** convert date */
                 var allSpan = $(".monthTitle");
-                allSpan.each((index) =>
-                {
+                allSpan.each((index) => {
                     const $span = allSpan.eq(index);
 
                     /** get the date info */
                     const rawDate = $span.text().trim();
                     const date = new Date(rawDate);
-                    if (!isNaN(date))
-                    {
+                    if (!isNaN(date)) {
                         // span.textContent = formatter.format(date);
                         $span.text(formatter_month.format(date));
                     }
@@ -442,5 +437,4 @@
     </script>
 
 </body>
-
 </html>

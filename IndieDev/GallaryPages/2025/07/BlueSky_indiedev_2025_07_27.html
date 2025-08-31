@@ -1,5 +1,7 @@
 <!doctype html>
 <html>
+
+
 <head>
 
     <meta charset="utf-8">
@@ -16,9 +18,10 @@
             height: 25px;
             color: green;
             position: absolute;
-            right: 0px;
+            left: 0px;
             bottom: 0px;
         }
+
 
 
         .entryContainer {
@@ -53,18 +56,41 @@
             min-height: 200px;
         }
 
-        .gallery img {
-            height: auto;
+            .gallery img {
+                height: auto;
+                display: block;
+                margin: 0 auto;
+                max-height: 80vh;
+                max-width: 100%;
+            }
+
+        .img_thumbnails {
+            max-width: 90vw;
+        }
+
+        .entryDiv:hover .closeIcon {
             display: block;
-            margin: 0 auto;
-            max-height: 80vh;
-            max-width: 100%;
         }
 
-        .img_thumbnails{
-            max-width:90vw;
+        .closeIcon {
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            right: 0px;
+            top: 0px;
         }
 
+        .entryDiv:hover .saveIcon {
+            display: block;
+        }
+
+        .saveIcon {
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+        }
 
         @media (min-width: 1000px) {
 
@@ -91,10 +117,24 @@
                     max-height: 200px;
                     display: block;
                 }
+
+            .closeIcon {
+                display: none;
+            }
+
+            .saveIcon {
+                display: none;
+            }
+        }
+
+        .hiddenResource {
+            display: none;
+            height: 0px;
         }
     </style>
 
 </head>
+
 
 
 <body style="Color:silver;">
@@ -157,7 +197,17 @@
                     <a href="https://bsky.app/profile/codernunk.bsky.social/post/3luxiuyapb22w" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -194,7 +244,17 @@
                     <a href="https://bsky.app/profile/lessaria.bsky.social/post/3luxkbyimqc2h" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -213,7 +273,17 @@
                     <a href="https://bsky.app/profile/pyrrhicparadise.bsky.social/post/3luxdzrkbvc26" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -246,7 +316,17 @@
                     <a href="https://bsky.app/profile/davidpateti.bsky.social/post/3luy7zuhm5k2w" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -265,7 +345,17 @@
                     <a href="https://bsky.app/profile/drawmi.bsky.social/post/3luxxvbrguc23" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -284,7 +374,17 @@
                     <a href="https://bsky.app/profile/vertexrage.bsky.social/post/3luxtmlhwlk2h" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -303,7 +403,17 @@
                     <a href="https://bsky.app/profile/tcbasche.bsky.social/post/3luxm72ktjs25" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -322,7 +432,17 @@
                     <a href="https://bsky.app/profile/folkorigin.bsky.social/post/3lux43ipnok24" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -341,7 +461,17 @@
                     <a href="https://bsky.app/profile/zeffiry.bsky.social/post/3luwzjnpv2c2c" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -360,7 +490,17 @@
                     <a href="https://bsky.app/profile/kingasix.bsky.social/post/3luweddoirc2g" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -379,7 +519,17 @@
                     <a href="https://bsky.app/profile/maturememory.bsky.social/post/3luwa4bxjcs2s" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -398,7 +548,17 @@
                     <a href="https://bsky.app/profile/nullham.bsky.social/post/3luyanqmrtk2z" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -417,7 +577,17 @@
                     <a href="https://bsky.app/profile/albertoklocker.bsky.social/post/3luy62opui22u" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -436,7 +606,17 @@
                     <a href="https://bsky.app/profile/melqartgames.bsky.social/post/3luxjz2tpx22t" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -455,7 +635,17 @@
                     <a href="https://bsky.app/profile/cocosrevenge.bsky.social/post/3luxhxwyt3e23" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -474,7 +664,17 @@
                     <a href="https://bsky.app/profile/deprecatedgames.bsky.social/post/3lux7ye2wvc2m" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -493,7 +693,17 @@
                     <a href="https://bsky.app/profile/mazestalker.bsky.social/post/3lux5lvq25s2v" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -512,7 +722,17 @@
                     <a href="https://bsky.app/profile/cebcode.bsky.social/post/3luwxqshcf22b" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -545,7 +765,17 @@
                     <a href="https://bsky.app/profile/aneeshjoshi.bsky.social/post/3luweex2uv225" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -564,7 +794,17 @@
                     <a href="https://bsky.app/profile/elvgames.bsky.social/post/3luxt5mqorc2z" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -583,7 +823,17 @@
                     <a href="https://bsky.app/profile/playtester.io/post/3luxsttlbwv2z" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -602,7 +852,17 @@
                     <a href="https://bsky.app/profile/pixerelia.bsky.social/post/3luxsognae22z" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -641,7 +901,17 @@
                     <a href="https://bsky.app/profile/playtester.io/post/3luxs5vnz3i2j" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -660,7 +930,17 @@
                     <a href="https://bsky.app/profile/rpanich.bsky.social/post/3luximdwf5s2f" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -679,7 +959,17 @@
                     <a href="https://bsky.app/profile/drowsierstone.newgrounds.com/post/3luxf537tzk2y" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -698,7 +988,17 @@
                     <a href="https://bsky.app/profile/taikwy.bsky.social/post/3luxdt52db227" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -759,7 +1059,17 @@
                     <a href="https://bsky.app/profile/magical-roguelike.bsky.social/post/3lux33czobc2o" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -778,7 +1088,17 @@
                     <a href="https://bsky.app/profile/eoto-game.bsky.social/post/3luwzwfx6gs2m" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -831,7 +1151,17 @@
                     <a href="https://bsky.app/profile/hauntedarcade.bsky.social/post/3luy6kqofk22s" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -850,7 +1180,17 @@
                     <a href="https://bsky.app/profile/cocosrevenge.bsky.social/post/3luy6gcrwek2n" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -869,7 +1209,17 @@
                     <a href="https://bsky.app/profile/neon-brain.itch.io/post/3luy6g657tc2h" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -888,7 +1238,17 @@
                     <a href="https://bsky.app/profile/alessandrocapriolo.bsky.social/post/3luxs4tgxhk25" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -921,7 +1281,17 @@
                     <a href="https://bsky.app/profile/playtester.io/post/3luxfrwgosw27" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -940,7 +1310,17 @@
                     <a href="https://bsky.app/profile/splittown.bsky.social/post/3lux5xmexo22s" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -959,7 +1339,17 @@
                     <a href="https://bsky.app/profile/neboslav-game.bsky.social/post/3lux55vymmk2g" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -992,7 +1382,17 @@
                     <a href="https://bsky.app/profile/cocosrevenge.bsky.social/post/3luwkaiaspc24" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -1011,7 +1411,17 @@
                     <a href="https://bsky.app/profile/4tailsstudios.bsky.social/post/3luxpngf4ik23" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -1046,7 +1456,17 @@
                     <a href="https://bsky.app/profile/burningloaf.bsky.social/post/3luxd6gfil222" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -1065,7 +1485,17 @@
                     <a href="https://bsky.app/profile/nolootstudios.bsky.social/post/3lux5erdutc2e" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -1116,7 +1546,17 @@
                     <a href="https://bsky.app/profile/duckilous.bsky.social/post/3luw6mcynm22p" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -1135,7 +1575,17 @@
                     <a href="https://bsky.app/profile/squiglystudio.bsky.social/post/3luvvmvcg5k2w" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -1154,7 +1604,17 @@
                     <a href="https://bsky.app/profile/edensalvgame.bsky.social/post/3luy5m4twrc2g" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -1173,7 +1633,17 @@
                     <a href="https://bsky.app/profile/internalnovelgame.bsky.social/post/3luxlebuzuj26" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -1192,7 +1662,17 @@
                     <a href="https://bsky.app/profile/ramonwilhelm.bsky.social/post/3luxhy2xsv223" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -1211,7 +1691,17 @@
                     <a href="https://bsky.app/profile/rayhikari.bsky.social/post/3luwrmos42s2j" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -1230,7 +1720,17 @@
                     <a href="https://bsky.app/profile/robodome.astralcoast.com/post/3luwfuutylk25" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -1249,7 +1749,17 @@
                     <a href="https://bsky.app/profile/f11bot.bsky.social/post/3luy6rmp3cc2n" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -1268,7 +1778,17 @@
                     <a href="https://bsky.app/profile/cinnadev.bsky.social/post/3luxgg2herk2e" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -1301,7 +1821,17 @@
                     <a href="https://bsky.app/profile/slugglove.bsky.social/post/3luxfutosrk2c" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -1320,7 +1850,17 @@
                     <a href="https://bsky.app/profile/waveygames.bsky.social/post/3luxfj2ssu22n" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -1339,7 +1879,17 @@
                     <a href="https://bsky.app/profile/arcaneappetites.bsky.social/post/3luxdvi664c24" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -1392,7 +1942,17 @@
                     <a href="https://bsky.app/profile/grabbus.bsky.social/post/3luw2kenm3s2z" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -1411,7 +1971,17 @@
                     <a href="https://bsky.app/profile/itsmirror.bsky.social/post/3luw7nvozs22c" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -1430,7 +2000,17 @@
                     <a href="https://bsky.app/profile/migration-crowgame.bsky.social/post/3luwranhzks2i" target="_blank">
                         
                                 <div class="videoIcon">
-                                    <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg" inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
                 					</svg>
                                 </div>
                                 
@@ -1477,7 +2057,8 @@
     </div>
     <!-- Support -->
     <div style="align-self: center;align-content: center;align-items: center;text-align: right;">
-        <a href="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/SubPages/Support.html">
+        <a href="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/SubPages/Support.html"
+           style="text-decoration:none">
             <img src="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/Resources/Images/Patreon%20logo.png" style="max-width: 20px;border-radius: 5px;">
             <img src="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/Resources/Images/kofi%20logo.png" style="max-width: 20px;border-radius: 5px;">
             <img src="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/Resources/Images/paypal%20logo.png" style="max-width: 20px;border-radius: 5px;background-color: white;">
@@ -1486,70 +2067,62 @@
 
 
 
+    <!-- hidden resource -->
+    <div class="hiddenResource">
+        <div id="Icon_Heart" style="border:1px silver solid;background:black">
+            <svg fill="Gray" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                 x="0px" y="0px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+            <g id="Favorite-Filled">
+            <path d="M12,22C9.63,20.17,1,13.12,1,7.31C1,4.38,3.47,2,6.5,2c1.9,0,3.64,0.93,4.65,2.48L12,5.78l0.85-1.3 C13.86,2.93,15.6,2,17.5,2C20.53,2,23,4.38,23,7.31C23,13.15,14.38,20.18,12,22z">
+                        </path>
+                    </g>
+                </g>
+            </svg>
+        </div>
+        <svg id="icon-close" viewBox="0 0 25 25" fill="#000" xmlns="http://www.w3.org/2000/svg" stroke="#ed833d">
+            <rect width="23" height="23" fill="black"></rect>
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z"
+                      fill="#ff0000"></path>
+            </g>
+        </svg>
+        <div id="example_entryDiv" class="entryDiv">
+            <div class="closeIcon">
+                <svg version="1.1" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00"
+                     enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                <use href="#icon-close"></use>
+                </svg>
+            </div>
+            <a href="https://bsky.app/profile/upchuckle.bsky.social/post/3lvhjn2davc2x" target="_blank">
+
+
+                <div class="gallery">
+                    <img src="https://video.bsky.app/watch/did%3Aplc%3Ayjafvn7w6nfpcfrei6b5bdv2/bafkreifrv75o3arqj4m774hvocxpz2xrir2ivpaduk6apwfpuwkkragziy/thumbnail.jpg">
+                </div>
+
+
+            </a>
+        </div>
+    </div>
+
+    <!-- edit save posts-->
+    <div>
+        <div id="panel_SavedPost" class="entryContainer">
+
+        </div>
+    </div>
+
     <!-- script -->
-    <script src="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/Resources/jquery-3.7.1.min.js"></script>
-    <script>
+    src="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/Resources/Javascript/jquery-3.7.1.min.js"></script>
+    <script src="BlueSky_ImageGallery.js"></script>
 
-        /* --------------------------------------------------- */
-        function ThumbNailLinkCheck() {
-            //const img = document.getElementById(".img_thumbnails");
-            const targetTagName = ".img_thumbnails";
-            const img = $(targetTagName);
-            console.assert(img.length > 0, "Failed: img.length>0", img);
-
-
-            img.each(function () {
-                if (this.complete && this.naturalWidth !== 0) {
-                    $(targetTagName).show();
-                } else {
-                    $(targetTagName).hide();
-
-                    $(this).on("load", function () {
-                        $(targetTagName).show();
-                    });
-
-                    $(this).on("error", function () {
-
-                        $(targetTagName).hide();
-                    });
-                }
-            });
-
-
-        }
-        /* --------------------------------------------------- */
-        function checkLinksExist() {
-            function hideNotExistLink(id_link) {
-                const $link_next = $(id_link);
-                const url_test = $link_next.attr("href");
-
-                fetch(url_test)
-                    .then(res => {
-                        if (res.ok) {
-                            console.log("Exist ✅");
-                            $link_next.show();
-                        } else {
-                            console.log("Not Exist ❌");
-                            $link_next.hide();
-                        }
-                    })
-                    .catch(() => {
-                        $("#" + id_link).hide();
-                        console.log("Error ❌");
-                    });
-            }
-
-            hideNotExistLink(".link_next_page");;
-            hideNotExistLink(".link_previous_page");;
-
-        }
-        /* --------------------------------------------------- */
-        (function () {
-            ThumbNailLinkCheck();
-            checkLinksExist();
-        })();
-
-
-    </script>
 </body>
 </html>
