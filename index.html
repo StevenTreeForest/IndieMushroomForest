@@ -63,6 +63,10 @@
             /* 統一寬度 */
             text-decoration: none;
         }
+
+        .numSavedPost{
+            color:red;
+        }
     </style>
     <title>Indie Mushroom Forest</title>
 </head>
@@ -440,8 +444,8 @@
 
     <!-- Script Area -->
     <script src="/IndieMushroomForest/IndieDev/Resources/Javascript/jquery-3.7.1.min.js"></script>
-    <!-- <script src="/IndieMushroomForest/IndieDev/Resources/Javascript/SharedLib.js"></script> -->
-    <!-- <script src="/IndieMushroomForest/IndieDev/Resources/Javascript/index.js"></script> -->
+    <!-- <script src="/IndieMushroomForest/IndieDev/Resources/Javascript/SharedLib.min.js"></script> -->
+    <!-- <script src="/IndieMushroomForest/IndieDev/Resources/Javascript/index.min.js"></script> -->
     <script>
         
         function loadJSPack()
@@ -450,8 +454,8 @@
             try
             {
 
-                let scriptPack = ["/IndieMushroomForest/IndieDev/Resources/NoPushTempWork/SharedLib_raw.js"
-                    , "/IndieMushroomForest/IndieDev/Resources/NoPushTempWork/index_raw.js"
+                let scriptPack = ["/IndieMushroomForest/IndieDev/Resources/NoPushTempWork/SharedLib.js"
+                    , "/IndieMushroomForest/IndieDev/Resources/NoPushTempWork/index.js"
 
                 ];
 
@@ -459,7 +463,7 @@
                 {
                     const script = document.createElement("script");
                     script.src = scriptPath + "?ts=" + Date.now();
-                    console.log(script.src);
+                    // console.log(script.src);
                     document.head.appendChild(script);
                 }
 
