@@ -135,18 +135,43 @@
 </head>
 
 <body>
-    <h1 style="Color:silver;text-align: center;">BlueSky IndieDev Saved Post</h1>
 
 
-    <!-- navigation panel -->
-    <div style="text-align: center;height:50px;">
-        <span>
-            <a href="../../" style="color: cyan;margin: 10px;">Home</a>
-        </span>
-    </div>
-
-    <!-- hidden resource -->
     <div>
+        <h1 style="Color:silver;text-align: center;">BlueSky IndieDev Saved Post</h1>
+
+
+        <!-- navigation panel -->
+        <div style="text-align: center;height:50px;">
+            <span>
+                <a href="../../" style="color: cyan;margin: 10px;">Home</a>
+            </span>
+        </div>
+
+        <div>
+            Number of Saved Posts : <span class="NumSavedPost">---</span>
+        </div>
+
+        <!-- Data commands-->
+        <div>
+            <!-- download button -->
+            <div id="downloadBtn"><a>Download backup file</a></div>
+            <!-- upload button -->
+            <span>Upload backup file</span>
+            <input type="file" id="fileInput"  accept=".txt" />
+        </div>
+
+
+
+        <!-- edit save posts-->
+        <div>
+            <div id="panel_SavedPost" class="entryContainer">
+
+            </div>
+        </div>
+
+
+        <!-- hidden resource -->
         <div class="hiddenResource">
             <div id="Icon_Heart" style="border:1px silver solid;background:black">
                 <svg fill="Gray" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -210,6 +235,7 @@
                         </svg>
                     </div>
 
+
                     <div class="gallery">
                         <img
                             src="https://video.bsky.app/watch/did%3Aplc%3Ayjafvn7w6nfpcfrei6b5bdv2/bafkreifrv75o3arqj4m774hvocxpz2xrir2ivpaduk6apwfpuwkkragziy/thumbnail.jpg">
@@ -219,274 +245,14 @@
                 </a>
             </div>
         </div>
-
-        <!-- edit save posts-->
-        <div>
-            <div id="panel_SavedPost" class="entryContainer">
-
-            </div>
-        </div>
     </div>
 
-
     <!-- script -->
-
-    <script
-        src="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/Resources/Javascript/jquery-3.7.1.min.js"></script>
-    <script>
-        const keyName_SavedPost = "SavedPost";
-        /* --------------------------------------------------- */
-        class DEF_SavedPostEntry
-        {
-            postLink = "";
-            imgLinks = [];
-        }
-        /* --------------------------------------------------- */
-        /** @return {Array<DEF_SavedPostEntry>} */
-        function getSavedPostArray()
-        {
-            try
-            {
-                let data_savedPost = JSON.parse(localStorage.getItem(keyName_SavedPost));
-
-                if (typeof data_savedPost === "undefined" || data_savedPost == null)
-                {
-                    // console.log("ddd");
-                    data_savedPost = [];
-                }
-
-                console.assert(!(typeof data_savedPost === "undefined" || data_savedPost == null)
-                    , "Failed: !(typeof data_savedPost === undefined)"
-                    , data_savedPost);
-
-                // console.log(data_savedPost);
-
-                return data_savedPost;
-            } catch (error)
-            {
-                console.error(`${error}.\n ${error.stack}`);
-            }
-        }
-        /* --------------------------------------------------- */
-        function removePostInSavedPost(link_post)
-        {
-            try
-            {
-
-                let data_savedPost = getSavedPostArray();
-
-                let data_new = [];
-
-                let found = false;
-                for (let i = 0; i < data_savedPost.length; i++)
-                {
-                    let post_now = data_savedPost[i];
-                    if (post_now.postLink != link_post)
-                    {
-                        data_new.push(post_now);
-                    }
-                }
-
-                localStorage.setItem(keyName_SavedPost, JSON.stringify(data_new));
-
-
-            } catch (error)
-            {
-                console.error(`${error}.\n ${error.stack}`);
-            }
-        }
-        /* --------------------------------------------------- */
-        function ShowSavedPost()
-        {
-            try
-            {
-                /** only work on test */
-                // return;
-                const divName_panel = "panel_SavedPost";
-                let $panel = $("#" + divName_panel);
-
-                if ($panel.length == 0)
-                {
-                    $("<div>", {
-                        id: divName_panel
-                        , class: "entryContainer"
-                    })
-                        .appendTo("body");
-                    $panel = $("#" + divName_panel);
-                    // console.log("add panel");
-                }
-
-                $panel.empty();
-
-                let data_savedPost = getSavedPostArray();
-
-                for (let index = 0; index < data_savedPost.length; index++)
-                {
-                    /** @type {DEF_SavedPostEntry} */
-                    const postData = data_savedPost[index];
-
-                    // console.log("postData", postData);
-
-                    let template = $("#example_entryDiv").clone();
-                    template.removeAttr("id");
-                    template.appendTo($panel);
-                    template.find("a").attr("href", postData.postLink);
-                    var $gallery = template.find(".gallery").empty();
-                    var $closeButton = template.find(".closeIcon");
-                    console.assert($closeButton.length == 1, "Failed: $closeButton.length==1", template);
-                    $closeButton.on("click", function ()
-                    {
-                        var $link_post = $(this).parent().find("a");
-                        console.assert($link_post.length == 1, "Failed: $link_post.length==1", $(this).parent());
-                        var href_post = $link_post.attr("href");
-                        removePostInSavedPost(href_post);
-                        ShowSavedPost();
-                    });
-
-
-                    for (let index_img = 0; index_img < postData.imgLinks.length; index_img++)
-                    {
-                        const imgUrl = postData.imgLinks[index_img];
-                        let img_new = $("<img>", { src: imgUrl })
-                            .appendTo($gallery);
-                    }
-
-                }
-
-
-            } catch (error)
-            {
-                console.error(`${error}.\n ${error.stack}`);
-            }
-        }
-        /* --------------------------------------------------- */
-        function AddSavedPost(tag_link)
-        {
-            try
-            {
-
-
-                console.assert((tag_link instanceof HTMLAnchorElement)
-                    , "Failed:  (tag_link instanceof HTMLAnchorElement)"
-                    , tag_link);
-
-                const $tag_link = $(tag_link);
-                let href = $tag_link.attr("href");
-
-
-                var $imgs = $tag_link.find("img");
-                console.assert($imgs.length > 0, "Failed: $imgs.length>0", $tag_link);
-                let imgLinks = $imgs.map(function ()
-                {
-                    return $(this).attr("src");
-                }).get();  // .get() 把 jQuery 物件轉成普通陣列
-
-                console.assert(imgLinks.length > 0, "Failed: imgLinks.length>0", $tag_link);
-
-                //var entry = { postLink: {}, imgLinks: [] };
-                var entry = new DEF_SavedPostEntry();
-                Object.preventExtensions(entry);
-                entry.postLink = href;
-                entry.imgLinks = imgLinks;
-
-
-
-                if (!(keyName_SavedPost in localStorage))
-                {
-                    localStorage.setItem(keyName_SavedPost, JSON.stringify([]));
-                }
-
-
-
-                removePostInSavedPost(entry.postLink);
-
-
-                let data_savedPost = getSavedPostArray();
-                data_savedPost.push(entry);
-
-                localStorage.setItem(keyName_SavedPost, JSON.stringify(data_savedPost));
-                ShowSavedPost();
-
-
-
-
-            } catch (error)
-            {
-                console.error(`${error}.\n ${error.stack}`);
-            }
-        }
-        /* --------------------------------------------------- */
-        function Adjust_EntryDiv()
-        {
-            try
-            {
-                var list_entryDiv = $(".entryContainer .entryDiv");
-
-
-                /** add save icon */
-                list_entryDiv.each((index) =>
-                {
-
-                    var newIcon = $("#Icon_Heart")
-                        .clone()
-                        .attr({ class: "saveIcon" })
-                        .removeAttr("id", "")
-                        .appendTo($(list_entryDiv.eq(index)));
-
-                    newIcon.on("click", function ()
-                    {
-                        $div_this = $(this);
-                        var href = $(this).parent().find("a").get(0);
-
-                        let list_savedPost = getSavedPostArray();
-                        let isSaved = false;
-                        for (let index = 0; index < list_savedPost.length; index++)
-                        {
-                            const post = list_savedPost[index];
-                            if (post.postLink == href)
-                            {
-                                isSaved = true;
-                                break;
-                            }
-                        }
-
-                        if (isSaved)
-                        {
-                            removePostInSavedPost(href);
-                            ShowSavedPost();
-                        }
-                        else
-                        {
-                            AddSavedPost(href);
-                        }
-
-
-
-                    });
-                });
-
-            } catch (error)
-            {
-                console.error(`${error}.\n ${error.stack}`);
-            }
-        }
-        /* --------------------------------------------------- */
-        (function ()
-        {
-            try
-            {
-
-                Adjust_EntryDiv();
-                ShowSavedPost();
-
-            } catch (error)
-            {
-                console.error(`${error}.\n ${error.stack}`);
-            }
-
-        })();
-
-    </script>
+    <script src="/IndieMushroomForest/IndieDev/Resources/Javascript/jquery-3.7.1.min.js"></script>
+    <script src="/IndieMushroomForest/IndieDev/Resources/Javascript/SharedLib.min.js?ts=1"></script>
+    <script src="/IndieMushroomForest/IndieDev/Resources/Javascript/BlueSky_SavedPost_Manage.min.js?ts=2"></script>
+    <!-- <script src="/IndieMushroomForest/IndieDev/Resources/NoPushTempWork/SharedLib.js"></script>
+    <script src="/IndieMushroomForest/IndieDev/Resources/NoPushTempWork/BlueSky_SavedPost_Manage.js"></script> -->
 
 </body>
 
