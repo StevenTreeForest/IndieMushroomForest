@@ -3,6 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>
     document.addEventListener("DOMContentLoaded", function ()
     {
@@ -42,12 +44,12 @@
       font-family: Arial, sans-serif;
       line-height: 1.6;
       margin: 40px auto;
-      padding: 10px 50px;
+      /* padding: 10px 50px; */
       background-color: #112;
       margin: 0px;
       height: 100vh;
-      color:silver;
-   
+      color: silver;
+
     }
 
     h1,
@@ -88,18 +90,39 @@
       border-radius: 6px;
       margin-top: 30px;
     }
+
     a {
-      color:cyan;
+      color: cyan;
+    }
+
+
+    @media (min-width: 900px) {
+      .mainDiv {
+        max-width: 800px;
+      }
+
+
+    }
+
+    .mainDiv {
+      margin: 20px;
+      max-width: 90vw;
+    }
+
+    .navigationDiv
+    {
+text-align: right;
     }
   </style>
 </head>
 
 <body>
-  <div style="text-align: right;margin: 20px;max-width: 80vw;">
-    <a href="/IndieMushroomForest/index.html">Home</a>
-  </div>
-  <div>
-
+ 
+  <div class="mainDiv">
+    <div class="navigationDiv">
+      <a href="/IndieMushroomForest/index.html">Home</a>
+    </div>
+    
     <div style="color: silver">
       <div data-lang="en">
         <div>
@@ -258,11 +281,13 @@
           </div>
         </div>
       </div>
-    </div>
-    <div style="text-align: right;margin: 20px;">
-      <a href="/IndieMushroomForest/index.html">Home</a>
-    </div>
 
+      <div  class="navigationDiv">
+        <a href="/IndieMushroomForest/index.html">Home</a>
+      </div>
+  
+    </div>
+  
   </div>
 </body>
 
