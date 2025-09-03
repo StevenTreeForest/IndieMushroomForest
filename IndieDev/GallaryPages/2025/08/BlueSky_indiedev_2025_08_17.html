@@ -1,0 +1,608 @@
+<!doctype html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #112;
+        }
+
+
+
+        .videoIcon {
+            width: 25px;
+            height: 25px;
+            color: green;
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+        }
+
+
+
+        .entryContainer {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+
+            .entryContainer > div:nth-child(odd) {
+                border: 3px solid #636316;
+            }
+
+            .entryContainer > div:nth-child(even) {
+                border: 3px solid #1d5b2a;
+            }
+
+        .entryDiv {
+            position: relative;
+            gap: 10px;
+            margin: 0px 0px;
+            padding: 10px;
+            max-width: 90vw;
+        }
+
+        .gallery {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            min-height: 200px;
+        }
+
+            .gallery img {
+                height: auto;
+                display: block;
+                margin: 0 auto;
+                max-height: 80vh;
+                max-width: 100%;
+            }
+
+        .img_thumbnails {
+            max-width: 90vw;
+        }
+
+        .entryDiv:hover .closeIcon {
+            display: block;
+        }
+
+        .closeIcon {
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+        }
+
+        .entryDiv:hover .saveIcon {
+            display: block;
+        }
+
+        .saveIcon {
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+        }
+
+        @media (min-width: 1000px) {
+
+
+            .entryContainer {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .entryDiv {
+                max-width: auto;
+            }
+
+            .gallery {
+                min-height: 250px;
+            }
+
+                .gallery img {
+                    height: auto;
+                    max-width: 30vw;
+                    max-height: 200px;
+                    display: block;
+                }
+
+            .closeIcon {
+                display: none;
+            }
+
+            .saveIcon {
+                display: none;
+            }
+        }
+
+        .hiddenResource {
+            display: none;
+            height: 0px;
+        }
+    </style>
+
+</head>
+
+
+<body style="Color:silver;">
+    <h1 style="Color:silver;text-align: center;margin:0px;">
+        BlueSky Quick Recap #indiedev 2025-08-17
+    </h1>  
+    <!-- save post info -->
+    <div style="text-align:right;margin:10px;">
+        <span>Saved Post Num:</span> <span class="NumSavedPost">---</span>
+    </div>
+
+    <!-- navigation panel -->
+    <div style="text-align: center;margin-bottom:10px;">
+        <span>
+            <a class="link_previous_page"
+               href="/IndieMushroomForest/IndieDev/GallaryPages/2025/08/BlueSky_indiedev_2025_08_16.html" style="color: cyan;margin: 10px;">&lt;&lt; Previous</a>
+        </span>
+        <span>
+            <a href="/IndieMushroomForest/" style="color: cyan;margin: 10px;">Home</a>
+        </span>
+        <span>
+            <a class="link_next_page"
+               href="/IndieMushroomForest/IndieDev/GallaryPages/2025/08/BlueSky_indiedev_2025_08_18.html" style="color: cyan;margin: 10px;">
+                Next &gt;&gt;
+            </a>
+        </span>
+    </div>
+
+    <!-- thumbnails tilesmap -->
+    <div style="text-align:center;">
+        <img class="img_thumbnails" src="TileMap_2025_08_17.jpg" />
+    </div>
+
+
+    <div id="panel_displayContainer" class="entryContainer">
+        
+                <div class="entryDiv">
+                    <a href="https://bsky.app/profile/forgeborg-games.bsky.social/post/3lwmo7pqty32v" target="_blank">
+                        
+                                <div class="videoIcon">
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                					</svg>
+                                </div>
+                                
+                        
+                                <div class="gallery">
+                                    
+                                        <img src="https://video.bsky.app/watch/did%3Aplc%3A57vmpv46gdmvtc3cwaudo5tx/bafkreibzbp2ks7nddos53vdpviprgjuhveupdogkiihuct3k3eqjg2zsgq/thumbnail.jpg" loading="lazy">
+                                        
+                                </div>
+                
+                                
+                    </a>
+                </div>
+                
+                <div class="entryDiv">
+                    <a href="https://bsky.app/profile/shannonsketches.bsky.social/post/3lwmyxhvlzc2v" target="_blank">
+                        
+                        
+                                <div class="gallery">
+                                    
+                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ic6ujfypw2ea77mp5xmqmrxp/bafkreiboen5ep54iwkhrif7h4i3eyrqxcqkmimcjkbr5gt4uspkwejmqg4@jpeg" loading="lazy">
+                                        
+                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ic6ujfypw2ea77mp5xmqmrxp/bafkreihqfg56evfr4du3fk6jjpqi3pnaeuiepv3unmc2gwnkkyj3l3647u@jpeg" loading="lazy">
+                                        
+                                </div>
+                
+                                
+                    </a>
+                </div>
+                
+                <div class="entryDiv">
+                    <a href="https://bsky.app/profile/cicadaqueen.buzz/post/3lwlxdukpps2p" target="_blank">
+                        
+                        
+                                <div class="gallery">
+                                    
+                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:pfwwdymphakgamezdggpkoog/bafkreiaw7k4ec5thux3ueqvba6rmnsai7qx4ugyjxgslu2w3xxzvuf26oi@jpeg" loading="lazy">
+                                        
+                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:pfwwdymphakgamezdggpkoog/bafkreicdzsnk4fqjircl4fd5b7kkhsdj4fvciseoeq2toty7r7rfhjkmji@jpeg" loading="lazy">
+                                        
+                                </div>
+                
+                                
+                    </a>
+                </div>
+                
+                <div class="entryDiv">
+                    <a href="https://bsky.app/profile/pyrrhicparadise.bsky.social/post/3lwm2almakk26" target="_blank">
+                        
+                                <div class="videoIcon">
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                					</svg>
+                                </div>
+                                
+                        
+                                <div class="gallery">
+                                    
+                                        <img src="https://video.bsky.app/watch/did%3Aplc%3A553jlbkjicydul4srs65zipk/bafkreigo4yre5t7vd6nmu2plfe6tmun4cdqmd2orjhvmcgw4ozo7cohr4m/thumbnail.jpg" loading="lazy">
+                                        
+                                </div>
+                
+                                
+                    </a>
+                </div>
+                
+                <div class="entryDiv">
+                    <a href="https://bsky.app/profile/deprecatedgames.bsky.social/post/3lwmkrnqbrk2e" target="_blank">
+                        
+                        
+                                <div class="gallery">
+                                    
+                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ra6h6lzltxmwt3iwna36yycp/bafkreiai4sxiehx7s3oqaj6qygcja6cbgixoa3d66ytkp3fkobuj5ytx5y@jpeg" loading="lazy">
+                                        
+                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ra6h6lzltxmwt3iwna36yycp/bafkreig4apvyhidiewqhg3i3sevr4cict7z3d3g3nygypn2wqowvlamqju@jpeg" loading="lazy">
+                                        
+                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ra6h6lzltxmwt3iwna36yycp/bafkreigojvkpbynygvskyexaigeqpcd3ftfa5oc3x5no5bphwzgvrfajie@jpeg" loading="lazy">
+                                        
+                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ra6h6lzltxmwt3iwna36yycp/bafkreidqcwpauu644ex5xswgdp3yln5bfjlq6j2hjv53npu6rb3l3caydy@jpeg" loading="lazy">
+                                        
+                                </div>
+                
+                                
+                    </a>
+                </div>
+                
+                <div class="entryDiv">
+                    <a href="https://bsky.app/profile/zenfaproductions.com/post/3lwmscdatc22k" target="_blank">
+                        
+                        
+                                <div class="gallery">
+                                    
+                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:x6f5i4jnwjs4zarl5kz2u6jg/bafkreicshopgemk6utlyvjrszjqd35dhyiyhpth64shoavjdol36xjttdm@jpeg" loading="lazy">
+                                        
+                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:x6f5i4jnwjs4zarl5kz2u6jg/bafkreicqawbxazflury5zacq4sc2fhqcbej3du6ire5jcysmiom2hg75e4@jpeg" loading="lazy">
+                                        
+                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:x6f5i4jnwjs4zarl5kz2u6jg/bafkreigiamveaj7eowj4llbv5v34fjb5yk5fzewxjln4lltr7rp7vktlea@jpeg" loading="lazy">
+                                        
+                                </div>
+                
+                                
+                    </a>
+                </div>
+                
+                <div class="entryDiv">
+                    <a href="https://bsky.app/profile/poeticprogrammer.bsky.social/post/3lwmqhpxnds2k" target="_blank">
+                        
+                                <div class="videoIcon">
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                					</svg>
+                                </div>
+                                
+                        
+                                <div class="gallery">
+                                    
+                                        <img src="https://video.bsky.app/watch/did%3Aplc%3Aukjtrr6mijdslfcxbzdnkblr/bafkreigsvc32lep3x5ya72oho43edvjan6lvzfhf2cwc5lvh5ynj5mtbx4/thumbnail.jpg" loading="lazy">
+                                        
+                                </div>
+                
+                                
+                    </a>
+                </div>
+                
+                <div class="entryDiv">
+                    <a href="https://bsky.app/profile/yaru.itch.io/post/3lwn2ktagdk23" target="_blank">
+                        
+                        
+                                <div class="gallery">
+                                    
+                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:glyevefh7adltr46cbrk3vck/bafkreiagnaqb2enqpnxgmc2c4siapku76cez7uounj5tmbh6syzcx53nn4@jpeg" loading="lazy">
+                                        
+                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:glyevefh7adltr46cbrk3vck/bafkreiem7izs7jvkgs4m3qnlnauexyjyjfsab5o3zil3es4zkgsc73i5ni@jpeg" loading="lazy">
+                                        
+                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:glyevefh7adltr46cbrk3vck/bafkreiaofq5p5klmmamqfx6oqd2doon3eamtep6laa6q3wdxagske3cvde@jpeg" loading="lazy">
+                                        
+                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:glyevefh7adltr46cbrk3vck/bafkreiasham6d2qvlxo3z42icsbcyxfwbb2sqcngedlo2kjpvq32uguumy@jpeg" loading="lazy">
+                                        
+                                </div>
+                
+                                
+                    </a>
+                </div>
+                
+                <div class="entryDiv">
+                    <a href="https://bsky.app/profile/cosmiclizard25.bsky.social/post/3lwmqt3s7ts2v" target="_blank">
+                        
+                                <div class="videoIcon">
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                					</svg>
+                                </div>
+                                
+                        
+                                <div class="gallery">
+                                    
+                                        <img src="https://video.bsky.app/watch/did%3Aplc%3A7dctb4o2nr22xtc45jo5htuj/bafkreifzihu5ds2d3zitoypdlvqhdgge34t4woio3sbh3myuc7dwjvgbdm/thumbnail.jpg" loading="lazy">
+                                        
+                                </div>
+                
+                                
+                    </a>
+                </div>
+                
+                <div class="entryDiv">
+                    <a href="https://bsky.app/profile/critacle.bsky.social/post/3lwlz7lzzac22" target="_blank">
+                        
+                                <div class="videoIcon">
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                					</svg>
+                                </div>
+                                
+                        
+                                <div class="gallery">
+                                    
+                                        <img src="https://video.bsky.app/watch/did%3Aplc%3Aobssocdren7ffciswlo3b5di/bafkreidfhnuce2qrdlcmcqtd6oyie7xlunxjrqg7o7kc5baplyqf7nrvpi/thumbnail.jpg" loading="lazy">
+                                        
+                                </div>
+                
+                                
+                    </a>
+                </div>
+                
+                <div class="entryDiv">
+                    <a href="https://bsky.app/profile/critacle.bsky.social/post/3lwmigum3ek2c" target="_blank">
+                        
+                                <div class="videoIcon">
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                					</svg>
+                                </div>
+                                
+                        
+                                <div class="gallery">
+                                    
+                                        <img src="https://video.bsky.app/watch/did%3Aplc%3Aobssocdren7ffciswlo3b5di/bafkreifzutjpdmz4mpt37zahmsqn77v2r7sm2raopj4jos7uwvzcquxs4q/thumbnail.jpg" loading="lazy">
+                                        
+                                </div>
+                
+                                
+                    </a>
+                </div>
+                
+                <div class="entryDiv">
+                    <a href="https://bsky.app/profile/rpanich.bsky.social/post/3lwmguc7c5s26" target="_blank">
+                        
+                                <div class="videoIcon">
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                					</svg>
+                                </div>
+                                
+                        
+                                <div class="gallery">
+                                    
+                                        <img src="https://video.bsky.app/watch/did%3Aplc%3Afiouwdsjpjp4jdrcootlkugv/bafkreie3ug6g233axlkho2g5y5ocyr52x74cs3i552yprqbntoig532obi/thumbnail.jpg" loading="lazy">
+                                        
+                                </div>
+                
+                                
+                    </a>
+                </div>
+                
+                <div class="entryDiv">
+                    <a href="https://bsky.app/profile/teamoglobin.bsky.social/post/3lwmokwomls2l" target="_blank">
+                        
+                                <div class="videoIcon">
+                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         viewBox="-120 -120 1440.00 1440.00"
+                                         enable-background="new 0 0 1200 1200"
+                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
+                                            </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
+                					</svg>
+                                </div>
+                                
+                        
+                                <div class="gallery">
+                                    
+                                        <img src="https://video.bsky.app/watch/did%3Aplc%3Att5aggejtqwjasd5eobr7c2o/bafkreiaumqylshktwjuzyjq2whqht5ts6ht33hg2ibvfxryskth5z4fb7e/thumbnail.jpg" loading="lazy">
+                                        
+                                </div>
+                
+                                
+                    </a>
+                </div>
+                
+                <div class="entryDiv">
+                    <a href="https://bsky.app/profile/deckiller.bsky.social/post/3lwm3o4xbts22" target="_blank">
+                        
+                        
+                                <div class="gallery">
+                                    
+                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:pbei7gykr6cbdpmfetk7hzmt/bafkreifr6qhntpzx3qlxd6lkpjiqnmmbluuqdzgag6mc7kdlmer2xlllqu@jpeg" loading="lazy">
+                                        
+                                </div>
+                
+                                
+                    </a>
+                </div>
+                
+    </div>
+
+    <!--Extra info -->
+    <div style="color: silver;">
+        <ul>
+            <li>
+                <span>Time Range: </span> <span>17 Aug 2025</span>
+            </li>
+            <li>Total Number of Post: 263  </li>
+            <li>Number of Post Displayed: 14  </li>
+        </ul>
+    </div>
+
+
+    <!-- navigation panel -->
+    <div style="text-align: center;height:50px;">
+        <span>
+            <a class="link_previous_page"
+               href="/IndieMushroomForest/IndieDev/GallaryPages/2025/08/BlueSky_indiedev_2025_08_16.html" style="color: cyan;margin: 10px;">&lt;&lt; Previous</a>
+        </span>
+        <span>
+            <a href="https://steventreeforest.github.io/IndieMushroomForest/" style="color: cyan;margin: 10px;">Home</a>
+        </span>
+        <span>
+            <a class="link_next_page"
+               href="/IndieMushroomForest/IndieDev/GallaryPages/2025/08/BlueSky_indiedev_2025_08_18.html" style="color: cyan;margin: 10px;">
+                Next &gt;&gt;
+            </a>
+        </span>
+    </div>
+    <!-- Support -->
+    <div style="align-self: center;align-content: center;align-items: center;text-align: right;">
+        <a href="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/SubPages/Support.html"
+           style="text-decoration:none">
+            <img src="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/Resources/Images/Patreon%20logo.png" style="max-width: 20px;border-radius: 5px;">
+            <img src="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/Resources/Images/kofi%20logo.png" style="max-width: 20px;border-radius: 5px;">
+            <img src="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/Resources/Images/paypal%20logo.png" style="max-width: 20px;border-radius: 5px;background-color: white;">
+        </a>
+    </div>
+
+
+
+    <!-- hidden resource -->
+    <div class="hiddenResource">
+        <div id="Icon_Heart" style="border:1px silver solid;background:black">
+            <svg fill="Gray" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                 x="0px" y="0px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+            <g id="Favorite-Filled">
+            <path d="M12,22C9.63,20.17,1,13.12,1,7.31C1,4.38,3.47,2,6.5,2c1.9,0,3.64,0.93,4.65,2.48L12,5.78l0.85-1.3 C13.86,2.93,15.6,2,17.5,2C20.53,2,23,4.38,23,7.31C23,13.15,14.38,20.18,12,22z">
+                        </path>
+                    </g>
+                </g>
+            </svg>
+        </div>
+        <svg id="icon-close" viewBox="0 0 25 25" fill="#000" xmlns="http://www.w3.org/2000/svg" stroke="#ed833d">
+            <rect width="23" height="23" fill="black"></rect>
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z"
+                      fill="#ff0000"></path>
+            </g>
+        </svg>
+        <div id="example_entryDiv" class="entryDiv">
+            <div class="closeIcon">
+                <svg version="1.1" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00"
+                     enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                <use href="#icon-close"></use>
+                </svg>
+            </div>
+            <a href="https://bsky.app/profile/upchuckle.bsky.social/post/3lvhjn2davc2x" target="_blank">
+
+
+                <div class="gallery">
+                    <img src="https://video.bsky.app/watch/did%3Aplc%3Ayjafvn7w6nfpcfrei6b5bdv2/bafkreifrv75o3arqj4m774hvocxpz2xrir2ivpaduk6apwfpuwkkragziy/thumbnail.jpg">
+                </div>
+
+
+            </a>
+        </div>
+    </div>
+
+    <!-- edit save posts-->
+    <div>
+        <div id="panel_SavedPost" class="entryContainer">
+
+        </div>
+    </div>
+
+    <!-- script -->
+    <script src="/IndieMushroomForest/IndieDev/Resources/Javascript/jquery-3.7.1.min.js"></script>
+    <script src="/IndieMushroomForest/IndieDev/Resources/Javascript/SharedLib.min.js?ts=638925151916915058"></script>
+    <script src="/IndieMushroomForest/IndieDev/Resources/Javascript/BlueSky_ImageGallery.min.js?ts=638925151916915058"></script>
+</body>
+</html>

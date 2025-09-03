@@ -1,0 +1,492 @@
+<!doctype html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #112;
+        }
+
+
+
+        .videoIcon {
+            width: 25px;
+            height: 25px;
+            color: green;
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+        }
+
+
+
+        .entryContainer {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+
+            .entryContainer > div:nth-child(odd) {
+                border: 3px solid #636316;
+            }
+
+            .entryContainer > div:nth-child(even) {
+                border: 3px solid #1d5b2a;
+            }
+
+        .entryDiv {
+            position: relative;
+            gap: 10px;
+            margin: 0px 0px;
+            padding: 10px;
+            max-width: 90vw;
+        }
+
+        .gallery {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            min-height: 200px;
+        }
+
+            .gallery img {
+                height: auto;
+                display: block;
+                margin: 0 auto;
+                max-height: 80vh;
+                max-width: 100%;
+            }
+
+        .img_thumbnails {
+            max-width: 90vw;
+        }
+
+        .entryDiv:hover .closeIcon {
+            display: block;
+        }
+
+        .closeIcon {
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+        }
+
+        .entryDiv:hover .saveIcon {
+            display: block;
+        }
+
+        .saveIcon {
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+        }
+
+        @media (min-width: 1000px) {
+
+
+            .entryContainer {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .entryDiv {
+                max-width: auto;
+            }
+
+            .gallery {
+                min-height: 250px;
+            }
+
+                .gallery img {
+                    height: auto;
+                    max-width: 30vw;
+                    max-height: 200px;
+                    display: block;
+                }
+
+            .closeIcon {
+                display: none;
+            }
+
+            .saveIcon {
+                display: none;
+            }
+        }
+
+        .hiddenResource {
+            display: none;
+            height: 0px;
+        }
+    </style>
+
+</head>
+
+
+<body style="Color:silver;">
+    <h1 style="Color:silver;text-align: center;margin:0px;">
+        BlueSky Quick Recap #indiedev 2025-08-19
+    </h1>  
+    <!-- save post info -->
+    <div style="text-align:right;margin:10px;">
+        <span>Saved Post Num:</span> <span class="NumSavedPost">---</span>
+    </div>
+
+    <!-- navigation panel -->
+    <div style="text-align: center;margin-bottom:10px;">
+        <span>
+            <a class="link_previous_page"
+               href="/IndieMushroomForest/IndieDev/GallaryPages/2025/08/BlueSky_indiedev_2025_08_18.html" style="color: cyan;margin: 10px;">&lt;&lt; Previous</a>
+        </span>
+        <span>
+            <a href="/IndieMushroomForest/" style="color: cyan;margin: 10px;">Home</a>
+        </span>
+        <span>
+            <a class="link_next_page"
+               href="/IndieMushroomForest/IndieDev/GallaryPages/2025/08/BlueSky_indiedev_2025_08_20.html" style="color: cyan;margin: 10px;">
+                Next &gt;&gt;
+            </a>
+        </span>
+    </div>
+
+    <!-- thumbnails tilesmap -->
+    <div style="text-align:center;">
+        <img class="img_thumbnails" src="TileMap_2025_08_19.jpg" />
+    </div>
+
+
+    <div id="panel_displayContainer" class="entryContainer">
+        
+                <div class="entryDiv">
+                    <a href="https://bsky.app/profile/orann.bsky.social/post/3lwqzsqnc3c2g" target="_blank">
+                        
+                        
+                                <div class="gallery">
+                                    
+                                        <img src="https://video.bsky.app/watch/did%3Aplc%3Adfc22y6pdbc3kdemej3esmxy/bafkreihsefwxjwy3lpir6mipm2sjwsdovskm5wtdle3xmpj7cgjki7trry/thumbnail.jpg" loading="lazy">
+                                        
+                                </div>
+                
+                                
+                    </a>
+                </div>
+                
+                <div class="entryDiv">
+                    <a href="https://bsky.app/profile/f11bot.bsky.social/post/3lwrlupugi22k" target="_blank">
+                        
+                        
+                                <div class="gallery">
+                                    
+                                        <img src="https://video.bsky.app/watch/did%3Aplc%3Amc3kthupxnuajzj6wrzuwlua/bafkreibsbfzdrp5x4gsdtdiqhmwhl5f3og4oxq2hd4m2fmrnqaodw5fnui/thumbnail.jpg" loading="lazy">
+                                        
+                                </div>
+                
+                                
+                    </a>
+                </div>
+                
+                <div class="entryDiv">
+                    <a href="https://bsky.app/profile/studiokobagames.bsky.social/post/3lwr6paotc22j" target="_blank">
+                        
+                        
+                                <div class="gallery">
+                                    
+                                        <img src="https://video.bsky.app/watch/did%3Aplc%3Aneedbvcnmjeoi6wir7xdzkhr/bafkreidyum7kmwvxvdx3mp5rhf7z2fbnigpnql3xtllfvmb6mchzyvhase/thumbnail.jpg" loading="lazy">
+                                        
+                                </div>
+                
+                                
+                    </a>
+                </div>
+                
+                <div class="entryDiv">
+                    <a href="https://bsky.app/profile/yaru.itch.io/post/3lws44slfzs2m" target="_blank">
+                        
+                        
+                                <div class="gallery">
+                                    
+                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:glyevefh7adltr46cbrk3vck/bafkreicmjqau36jwd2ok2f3urf7tu4j66zczpwyi3o5qbx3b3smbsqduf4@jpeg" loading="lazy">
+                                        
+                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:glyevefh7adltr46cbrk3vck/bafkreigseg62w2anjo6gi6waoivn7uvgugxr6qd7enuqj3fja5xquup7le@jpeg" loading="lazy">
+                                        
+                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:glyevefh7adltr46cbrk3vck/bafkreifcv6apliabz4j5km4ce6amn5pfndtzszgax4nhhjav5ppna6h4ia@jpeg" loading="lazy">
+                                        
+                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:glyevefh7adltr46cbrk3vck/bafkreibcmsgcyjuzwptl7zn6epy65ioabx5rfbxwiawo44nq5sbc7rv7ry@jpeg" loading="lazy">
+                                        
+                                </div>
+                
+                                
+                    </a>
+                </div>
+                
+                <div class="entryDiv">
+                    <a href="https://bsky.app/profile/lukepagca.bsky.social/post/3lwqb5cfhyk2e" target="_blank">
+                        
+                        
+                                <div class="gallery">
+                                    
+                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:5i2jyhx24xcpzlkdscvqujty/bafkreihiiotvakliar4ncu7fanqe6ak7jvmxfmin5s6fozryv6tzbpoq6m@jpeg" loading="lazy">
+                                        
+                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:5i2jyhx24xcpzlkdscvqujty/bafkreicvczclnenoemofa2mq5oymw7orwy5gmygntzypypxudahoqoms3m@jpeg" loading="lazy">
+                                        
+                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:5i2jyhx24xcpzlkdscvqujty/bafkreibvd5mvvllw55bjyvsh3rfwitpn357bqgvqcdhqoq2nd4a5ppg2ne@jpeg" loading="lazy">
+                                        
+                                </div>
+                
+                                
+                    </a>
+                </div>
+                
+                <div class="entryDiv">
+                    <a href="https://bsky.app/profile/anilifegame.bsky.social/post/3lwpvtnwe3c23" target="_blank">
+                        
+                        
+                                <div class="gallery">
+                                    
+                                        <img src="https://video.bsky.app/watch/did%3Aplc%3Aqzzecmdhiddbfluwjasdacrv/bafkreihu6y736xmwsauficyguwunwmmtwmicozed2algvu6zxqitdxoybq/thumbnail.jpg" loading="lazy">
+                                        
+                                </div>
+                
+                                
+                    </a>
+                </div>
+                
+                <div class="entryDiv">
+                    <a href="https://bsky.app/profile/cinnadev.bsky.social/post/3lwrcwnreus2b" target="_blank">
+                        
+                        
+                                <div class="gallery">
+                                    
+                                        <img src="https://video.bsky.app/watch/did%3Aplc%3Akdc6ys2xwa6p74fip6qzwvck/bafkreifeibgr5mkavdek5oqox6nnmlzuvnsxpnaahabslgsv4fnqpojwxu/thumbnail.jpg" loading="lazy">
+                                        
+                                </div>
+                
+                                
+                    </a>
+                </div>
+                
+                <div class="entryDiv">
+                    <a href="https://bsky.app/profile/gothmime.bsky.social/post/3lwqvfwyors2x" target="_blank">
+                        
+                        
+                                <div class="gallery">
+                                    
+                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:oiaam6fhg6ri6eelgjkpkrki/bafkreiaf2ed26c66ijlx2bylr2jwxi7tt7yywbtyta4lpeekqow6qqvz2q@jpeg" loading="lazy">
+                                        
+                                </div>
+                
+                                
+                    </a>
+                </div>
+                
+                <div class="entryDiv">
+                    <a href="https://bsky.app/profile/gothmime.bsky.social/post/3lwqmxuhaxk2r" target="_blank">
+                        
+                        
+                                <div class="gallery">
+                                    
+                                        <img src="https://video.bsky.app/watch/did%3Aplc%3Aoiaam6fhg6ri6eelgjkpkrki/bafkreihivujbjwnzcnz2jij6wjo6iwd74wbt5t4h3c6xpvobmhepyinuyu/thumbnail.jpg" loading="lazy">
+                                        
+                                </div>
+                
+                                
+                    </a>
+                </div>
+                
+                <div class="entryDiv">
+                    <a href="https://bsky.app/profile/lootdonkey.bsky.social/post/3lwqh4cbijj24" target="_blank">
+                        
+                        
+                                <div class="gallery">
+                                    
+                                        <img src="https://video.bsky.app/watch/did%3Aplc%3Ac2o77fiidmgpzg3n4x2viluh/bafkreidc5nnmqelcorxhgeqdgodityprqo4qv3zubx3z5ocl5zs3wnqkrm/thumbnail.jpg" loading="lazy">
+                                        
+                                </div>
+                
+                                
+                    </a>
+                </div>
+                
+                <div class="entryDiv">
+                    <a href="https://bsky.app/profile/devvengeful.bsky.social/post/3lwqgzajsm224" target="_blank">
+                        
+                        
+                                <div class="gallery">
+                                    
+                                        <img src="https://video.bsky.app/watch/did%3Aplc%3A7jc3tig3geti5vatfenad5bl/bafkreierg3uy6sq73epfilyhtmpbpjmxrcjv4rfbgwzpe4bum7jbb2fr4i/thumbnail.jpg" loading="lazy">
+                                        
+                                </div>
+                
+                                
+                    </a>
+                </div>
+                
+                <div class="entryDiv">
+                    <a href="https://bsky.app/profile/vegasinteractive.bsky.social/post/3lwpsmji6r226" target="_blank">
+                        
+                        
+                                <div class="gallery">
+                                    
+                                        <img src="https://video.bsky.app/watch/did%3Aplc%3Amii7rczdq75g7lnfjvqnh3g5/bafkreieicoroear7j43yydb2g4gb65uspglzwjatwc7iksi2zzaueycote/thumbnail.jpg" loading="lazy">
+                                        
+                                </div>
+                
+                                
+                    </a>
+                </div>
+                
+                <div class="entryDiv">
+                    <a href="https://bsky.app/profile/designergoblin.bsky.social/post/3lwratme4ac27" target="_blank">
+                        
+                        
+                                <div class="gallery">
+                                    
+                                        <img src="https://video.bsky.app/watch/did%3Aplc%3A7zyqnajvreh56g2p46pzprpx/bafkreica3rxygk6rfjdybmqe7bxnca5dt5mepv3e64twrs346bv5qildl4/thumbnail.jpg" loading="lazy">
+                                        
+                                </div>
+                
+                                
+                    </a>
+                </div>
+                
+                <div class="entryDiv">
+                    <a href="https://bsky.app/profile/chromaticconundrum.bsky.social/post/3lwqfcptbhc2b" target="_blank">
+                        
+                        
+                                <div class="gallery">
+                                    
+                                        <img src="https://video.bsky.app/watch/did%3Aplc%3Adcmm2tjtnf4pn3vvvsvpqgrv/bafkreibs6z5f24lbaenfw4qpgxozyeso4s7rosk2c3ijujfdrx7i52ppe4/thumbnail.jpg" loading="lazy">
+                                        
+                                </div>
+                
+                                
+                    </a>
+                </div>
+                
+                <div class="entryDiv">
+                    <a href="https://bsky.app/profile/ivysly.com/post/3lwqc53i37c2r" target="_blank">
+                        
+                        
+                                <div class="gallery">
+                                    
+                                        <img src="https://video.bsky.app/watch/did%3Aplc%3A4woruw474t2bm5qjow6wr3ad/bafkreic2v5vc3paed2sljfj2lkq4yfprjip6vptkt4ttwam5q2uiolks7u/thumbnail.jpg" loading="lazy">
+                                        
+                                </div>
+                
+                                
+                    </a>
+                </div>
+                
+    </div>
+
+    <!--Extra info -->
+    <div style="color: silver;">
+        <ul>
+            <li>
+                <span>Time Range: </span> <span>19 Aug 2025</span>
+            </li>
+            <li>Total Number of Post: 658  </li>
+            <li>Number of Post Displayed: 15  </li>
+        </ul>
+    </div>
+
+
+    <!-- navigation panel -->
+    <div style="text-align: center;height:50px;">
+        <span>
+            <a class="link_previous_page"
+               href="/IndieMushroomForest/IndieDev/GallaryPages/2025/08/BlueSky_indiedev_2025_08_18.html" style="color: cyan;margin: 10px;">&lt;&lt; Previous</a>
+        </span>
+        <span>
+            <a href="https://steventreeforest.github.io/IndieMushroomForest/" style="color: cyan;margin: 10px;">Home</a>
+        </span>
+        <span>
+            <a class="link_next_page"
+               href="/IndieMushroomForest/IndieDev/GallaryPages/2025/08/BlueSky_indiedev_2025_08_20.html" style="color: cyan;margin: 10px;">
+                Next &gt;&gt;
+            </a>
+        </span>
+    </div>
+    <!-- Support -->
+    <div style="align-self: center;align-content: center;align-items: center;text-align: right;">
+        <a href="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/SubPages/Support.html"
+           style="text-decoration:none">
+            <img src="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/Resources/Images/Patreon%20logo.png" style="max-width: 20px;border-radius: 5px;">
+            <img src="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/Resources/Images/kofi%20logo.png" style="max-width: 20px;border-radius: 5px;">
+            <img src="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/Resources/Images/paypal%20logo.png" style="max-width: 20px;border-radius: 5px;background-color: white;">
+        </a>
+    </div>
+
+
+
+    <!-- hidden resource -->
+    <div class="hiddenResource">
+        <div id="Icon_Heart" style="border:1px silver solid;background:black">
+            <svg fill="Gray" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                 x="0px" y="0px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+            <g id="Favorite-Filled">
+            <path d="M12,22C9.63,20.17,1,13.12,1,7.31C1,4.38,3.47,2,6.5,2c1.9,0,3.64,0.93,4.65,2.48L12,5.78l0.85-1.3 C13.86,2.93,15.6,2,17.5,2C20.53,2,23,4.38,23,7.31C23,13.15,14.38,20.18,12,22z">
+                        </path>
+                    </g>
+                </g>
+            </svg>
+        </div>
+        <svg id="icon-close" viewBox="0 0 25 25" fill="#000" xmlns="http://www.w3.org/2000/svg" stroke="#ed833d">
+            <rect width="23" height="23" fill="black"></rect>
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z"
+                      fill="#ff0000"></path>
+            </g>
+        </svg>
+        <div id="example_entryDiv" class="entryDiv">
+            <div class="closeIcon">
+                <svg version="1.1" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00"
+                     enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                <use href="#icon-close"></use>
+                </svg>
+            </div>
+            <a href="https://bsky.app/profile/upchuckle.bsky.social/post/3lvhjn2davc2x" target="_blank">
+
+
+                <div class="gallery">
+                    <img src="https://video.bsky.app/watch/did%3Aplc%3Ayjafvn7w6nfpcfrei6b5bdv2/bafkreifrv75o3arqj4m774hvocxpz2xrir2ivpaduk6apwfpuwkkragziy/thumbnail.jpg">
+                </div>
+
+
+            </a>
+        </div>
+    </div>
+
+    <!-- edit save posts-->
+    <div>
+        <div id="panel_SavedPost" class="entryContainer">
+
+        </div>
+    </div>
+
+    <!-- script -->
+    <script src="/IndieMushroomForest/IndieDev/Resources/Javascript/jquery-3.7.1.min.js"></script>
+    <script src="/IndieMushroomForest/IndieDev/Resources/Javascript/SharedLib.min.js?ts=638925151922328210"></script>
+    <script src="/IndieMushroomForest/IndieDev/Resources/Javascript/BlueSky_ImageGallery.min.js?ts=638925151922328210"></script>
+</body>
+</html>
