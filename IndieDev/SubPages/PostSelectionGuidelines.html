@@ -1,0 +1,265 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+  <script>
+    document.addEventListener("DOMContentLoaded", function ()
+    {
+      // 取得使用者瀏覽器語言
+      let userLang = navigator.language || navigator.userLanguage;
+      userLang = userLang.toLowerCase();
+
+      // 判斷語言 (可自己加更多條件)
+      let lang = "en";
+      if (userLang.startsWith("zh")) lang = "zh";
+      else if (userLang.startsWith("ja")) lang = "ja";
+      else if (userLang.startsWith("ko")) lang = "ko";
+
+      // 套用 CSS active class
+      document.querySelectorAll("[data-lang]").forEach(el =>
+      {
+        if (el.getAttribute("data-lang") === lang)
+        {
+          el.classList.add("active");
+        }
+      });
+    });
+  </script>
+  <style>
+ 
+
+    [data-lang] {
+      display: none;
+      /* 預設先隱藏所有語言 */
+    }
+
+    [data-lang].active {
+      display: block;
+      /* JS 選中的語言才顯示 */
+    }
+
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #fafafa;
+      color: #333;
+    }
+
+    h1,
+    h2 {
+      color: #2c3e50;
+    }
+
+    h1 {
+      border-bottom: 3px solid #3498db;
+      padding-bottom: 8px;
+    }
+
+    h2 {
+      margin-top: 30px;
+      border-left: 5px solid #3498db;
+      padding-left: 10px;
+    }
+
+    ul {
+      margin: 10px 0 20px 30px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .examples {
+      margin: 10px 0 20px 30px;
+      font-style: italic;
+      color: #555;
+    }
+
+    .note {
+      background: #fff3cd;
+      border: 1px solid #ffeeba;
+      color: #856404;
+      padding: 15px;
+      border-radius: 6px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body>
+    <div style="text-align: right;margin: 20px;">
+        <a href="/IndieMushroomForest/index.html">Home</a>
+    </div>
+  <div>
+
+    <div style="color: silver">
+      <div data-lang="en">
+          <div>
+              <h1>Post Selection Guidelines</h1>
+        
+              <p>To maintain quality and consistency, posts are filtered before being published. Below are the selection rules
+                and ordering criteria:</p>
+        
+              <h2>Posts That Tend to Be Kept</h2>
+              <ul>
+                <li><strong>Game screenshots</strong><br>
+                  <span class="examples">A screenshot that clearly shows what kind of game it is.</span>
+                </li>
+              </ul>
+        
+              <h2>Posts That Tend to Be Skipped</h2>
+              <ul>
+                <li><strong>Asset presentations</strong>
+                  <div class="examples">
+                    Examples:<br>
+                    “This is one of our characters doing a T-pose.”<br>
+                    “We made this 3D chair for our game.”
+                  </div>
+                </li>
+                <li><strong>Primitive development stage</strong>
+                  <div class="examples">Example: “This is my game. I made a 3D ball rolling.”</div>
+                </li>
+                <li><strong>Repetitive or low-progress updates</strong>
+                  <div class="examples">Example: “3rd post today. Progress is almost the same as two weeks ago.”</div>
+                </li>
+              </ul>
+        
+              <h2>Post Ordering</h2>
+              <p><strong>Posts are ordered by repost count, starting from the lowest.</strong></p>
+        
+              <div class="note">
+                ⚠️ <strong>Note:</strong> There is always a chance of mistakes in filtering. Any such misfires are
+                unintentional.
+              </div>
+            </div>
+      </div>
+      <div data-lang="zh">
+          <div>
+              <h1>帖子筛选规则</h1>
+            
+              <p>为了保持质量和一致性，帖子会在发布前进行筛选。以下是筛选标准和排序规则：</p>
+            
+              <h2>通常会保留的帖子</h2>
+              <ul>
+                <li><strong>游戏截图</strong><br>
+                  <span class="examples">截图能清楚展示游戏是什么类型。</span>
+                </li>
+              </ul>
+            
+              <h2>通常会跳过的帖子</h2>
+              <ul>
+                <li><strong>素材展示</strong>
+                  <div class="examples">
+                    示例：<br>
+                    “这是我们角色的 T-Pose 动作。”<br>
+                    “我们做了一个游戏里的 3D 椅子。”
+                  </div>
+                </li>
+                <li><strong>过于初级的开发阶段</strong>
+                  <div class="examples">示例：“这是我的游戏，我做了一个 3D 小球滚动。”</div>
+                </li>
+                <li><strong>内容重复或进度过少</strong>
+                  <div class="examples">示例：“今天发的第 3 个帖子，进度和两周前几乎一样。”</div>
+                </li>
+              </ul>
+            
+              <h2>帖子排序</h2>
+              <p><strong>优先展示 轉帖數 较低的帖子。</strong></p>
+            
+              <div class="note">
+                ⚠️ <strong>提示：</strong> 筛选过程中可能会有误判，这并非故意。
+              </div>
+            </div>
+      </div>
+
+      <div data-lang="ja">
+          <div>
+              <h1>投稿選別ガイドライン</h1>
+            
+              <p>投稿の品質と一貫性を保つため、公開前に内容をチェックしています。以下は選別基準と並び順です：</p>
+            
+              <h2>残されやすい投稿</h2>
+              <ul>
+                <li><strong>ゲームのスクリーンショット</strong><br>
+                  <span class="examples">ゲームの内容がひと目でわかるスクショ。</span>
+                </li>
+              </ul>
+            
+              <h2>スキップされやすい投稿</h2>
+              <ul>
+                <li><strong>アセット紹介だけの投稿</strong>
+                  <div class="examples">
+                    例：<br>
+                    「これはキャラクターのTポーズです。」<br>
+                    「ゲーム用に3Dの椅子を作りました。」
+                  </div>
+                </li>
+                <li><strong>開発がまだ初期段階のもの</strong>
+                  <div class="examples">例：「これは自作ゲームです。3Dボールを転がしてみました。」</div>
+                </li>
+                <li><strong>進捗がほとんど変わらない繰り返し投稿</strong>
+                  <div class="examples">例：「今日で3回目の投稿。進捗は2週間前とほぼ同じです。」</div>
+                </li>
+              </ul>
+            
+              <h2>投稿の並び順</h2>
+              <p><strong>リポスト数が少ない投稿から順に表示されます。</strong></p>
+            
+              <div class="note">
+                ⚠️ <strong>注意：</strong> 選別の過程で誤って判断してしまう場合がありますが、意図的なものではありません。
+              </div>
+            </div>
+      </div>
+
+      <div data-lang="ko">
+          <div>
+              <h1>게시물 선정 가이드라인</h1>
+            
+              <p>게시물의 품질과 일관성을 유지하기 위해, 공개 전에 필터링 과정을 거칩니다. 아래는 선정 기준과 정렬 규칙입니다:</p>
+            
+              <h2>유지되는 경우가 많은 게시물</h2>
+              <ul>
+                <li><strong>게임 스크린샷</strong><br>
+                  <span class="examples">게임이 어떤 종류인지 한눈에 알 수 있는 스크린샷.</span>
+                </li>
+              </ul>
+            
+              <h2>건너뛰어지는 경우가 많은 게시물</h2>
+              <ul>
+                <li><strong>에셋(소스) 소개만 하는 게시물</strong>
+                  <div class="examples">
+                    예시:<br>
+                    “이건 캐릭터 T-포즈입니다.”<br>
+                    “게임용으로 3D 의자를 만들었습니다.”
+                  </div>
+                </li>
+                <li><strong>아직 너무 초기 단계의 개발</strong>
+                  <div class="examples">예시: “이건 제가 만든 게임입니다. 3D 공을 굴려봤습니다.”</div>
+                </li>
+                <li><strong>진전이 거의 없는 반복 게시물</strong>
+                  <div class="examples">예시: “오늘 올린 세 번째 게시물입니다. 진행 상황은 2주 전과 거의 같습니다.”</div>
+                </li>
+              </ul>
+            
+              <h2>게시물 정렬</h2>
+              <p><strong>리포스트 수가 적은 게시물부터 표시됩니다.</strong></p>
+            
+              <div class="note">
+                ⚠️ <strong>주의:</strong> 필터링 과정에서 실수가 발생할 수 있으며, 이는 의도적인 것이 아닙니다.
+              </div>
+            </div>
+      </div>
+    </div>
+    <div style="text-align: right;margin: 20px;">
+        <a href="/IndieMushroomForest/index.html">Home</a>
+    </div>
+    
+  </div>
+</body>
+
+</html>
