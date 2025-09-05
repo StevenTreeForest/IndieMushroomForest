@@ -5,171 +5,57 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            background-color: #112;
-        }
+    <link rel="stylesheet" href="/IndieMushroomForest/IndieDev/Resources/Css/Bluesky_IndieDev_ImageGallery.min.css">
 
-
-
-        .videoIcon {
-            width: 25px;
-            height: 25px;
-            color: green;
-            position: absolute;
-            left: 0px;
-            bottom: 0px;
-        }
-
-
-
-        .entryContainer {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 10px;
-        }
-
-
-            .entryContainer > div:nth-child(odd) {
-                border: 3px solid #636316;
-            }
-
-            .entryContainer > div:nth-child(even) {
-                border: 3px solid #1d5b2a;
-            }
-
-        .entryDiv {
-            position: relative;
-            gap: 10px;
-            margin: 0px 0px;
-            padding: 10px;
-            max-width: 90vw;
-        }
-
-        .gallery {
-            justify-content: center;
-            align-items: center;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            min-height: 200px;
-        }
-
-            .gallery img {
-                height: auto;
-                display: block;
-                margin: 0 auto;
-                max-height: 80vh;
-                max-width: 100%;
-            }
-
-        .img_thumbnails {
-            max-width: 90vw;
-        }
-
-        .entryDiv:hover .closeIcon {
-            display: block;
-        }
-
-        .closeIcon {
-            width: 25px;
-            height: 25px;
-            position: absolute;
-            right: 0px;
-            top: 0px;
-        }
-
-        .entryDiv:hover .saveIcon {
-            display: block;
-        }
-
-        .saveIcon {
-            width: 25px;
-            height: 25px;
-            position: absolute;
-            right: 0px;
-            top: 0px;
-        }
-
-        @media (min-width: 1000px) {
-
-
-            .entryContainer {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 10px;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .entryDiv {
-                max-width: auto;
-            }
-
-            .gallery {
-                min-height: 250px;
-            }
-
-                .gallery img {
-                    height: auto;
-                    max-width: 30vw;
-                    max-height: 200px;
-                    display: block;
-                }
-
-            .closeIcon {
-                display: none;
-            }
-
-            .saveIcon {
-                display: none;
-            }
-        }
-
-        .hiddenResource {
-            display: none;
-            height: 0px;
-        }
-
-        a {
-            color: cyan;
-            text-decoration: none;
-        }
-    </style>
+    <!--<link rel="stylesheet" href="/IndieMushroomForest/IndieDev/Resources/NoPushTempWork/Css/Bluesky_IndieDev_ImageGallery.css">-->
 
 </head>
 
 
 <body style="Color:silver;">
-    <h1 style="Color:silver;text-align: center;margin:0px;">
-        BlueSky Quick Recap #indiedev 2025-07-12
-    </h1>
-    <!-- save post info -->
-    <div style="text-align:right;margin:10px;">
-        <span>Saved Post Num:</span> <span class="NumSavedPost">---</span>
+
+    <div class="topInfoPanel">
+        <h1 style="Color:silver;text-align: center;margin:0px;">
+            BlueSky Quick Recap #indiedev 2025-07-12
+        </h1>
+        <!-- save post info -->
+        <div style="display:flex; justify-content:space-between; align-items:center; margin:10px;">
+            <label>
+                <input id="checkbox_showSavedPost" type="checkbox"> Show Only Saved Posts
+            </label>
+
+            <span>
+                Saved Post Num: <span class="NumSavedPost">---</span>
+            </span>
+        </div>
+
+        <!-- navigation panel -->
+        <div class="navigationPanel">
+            <span>
+                <a class="link_previous_page"
+                   href="/IndieMushroomForest/IndieDev/GallaryPages/2025/07/BlueSky_indiedev_2025_07_11.html"
+                   style="color: cyan;margin: 10px;">&lt;&lt; Previous</a>
+            </span>
+            <span>
+                <a href="/IndieMushroomForest/"
+                   style="color: cyan;margin: 10px;">Home</a>
+            </span>
+            <span>
+                <a class="link_next_page"
+                   href="/IndieMushroomForest/IndieDev/GallaryPages/2025/07/BlueSky_indiedev_2025_07_13.html"
+                   style="color: cyan;margin: 10px;">
+                    Next &gt;&gt;
+                </a>
+            </span>
+        </div>
+
+
+        <!-- thumbnails tilesmap -->
+        <div style="text-align:center;">
+            <img class="img_thumbnails" src="TileMap_2025_07_12.jpg" />
+        </div>
     </div>
 
-    <!-- navigation panel -->
-    <div style="text-align: center;margin-bottom:10px;">
-        <span>
-            <a class="link_previous_page"
-               href="/IndieMushroomForest/IndieDev/GallaryPages/2025/07/BlueSky_indiedev_2025_07_11.html" style="color: cyan;margin: 10px;">&lt;&lt; Previous</a>
-        </span>
-        <span>
-            <a href="/IndieMushroomForest/" style="color: cyan;margin: 10px;">Home</a>
-        </span>
-        <span>
-            <a class="link_next_page"
-               href="/IndieMushroomForest/IndieDev/GallaryPages/2025/07/BlueSky_indiedev_2025_07_13.html" style="color: cyan;margin: 10px;">
-                Next &gt;&gt;
-            </a>
-        </span>
-    </div>
-
-    <!-- thumbnails tilesmap -->
-    <div style="text-align:center;">
-        <img class="img_thumbnails" src="TileMap_2025_07_12.jpg" />
-    </div>
 
 
     <div id="panel_displayContainer" class="entryContainer">
@@ -5826,50 +5712,59 @@
                 
     </div>
 
-    <!--Extra info -->
-    <div style="color: silver;">
-        <ul>
-            <li>
-                <span>Time Range: </span> <span>12 Jul 2025</span>
-            </li>
-            <li>Total Number of Post: 660+  </li>
-            <li>Number of Post Displayed: 236  </li>
-            <li>
-                <a href="/IndieMushroomForest/IndieDev/SubPages/PostSelectionGuidelines.html">Post Selection Guidelines</a>
-            </li>
-        </ul>
-    </div>
 
 
-    <!-- navigation panel -->
-    <div style="text-align: center;height:50px;">
+    <!-- bottom info panel -->
+    <div class="bottomInfoPanel">
 
-        <span>
-            <a class="link_previous_page"
-               href="/IndieMushroomForest/IndieDev/GallaryPages/2025/07/BlueSky_indiedev_2025_07_11.html" style="color: cyan;margin: 10px;">&lt;&lt; Previous</a>
-        </span>
-        <span>
-            <a href="/IndieMushroomForest/" style="color: cyan;margin: 10px;">Home</a>
-        </span>
-        <span>
-            <a class="link_next_page"
-               href="/IndieMushroomForest/IndieDev/GallaryPages/2025/07/BlueSky_indiedev_2025_07_13.html" style="color: cyan;margin: 10px;">
-                Next &gt;&gt;
+        <!--Extra info -->
+        <div style="color: silver;">
+            <ul>
+                <li>
+                    <span>Time Range: </span> <span>12 Jul 2025</span>
+                </li>
+                <li>Total Number of Post: 660+  </li>
+                <li>Number of Post Displayed: 236  </li>
+                <li>
+                    <a href="/IndieMushroomForest/IndieDev/SubPages/PostSelectionGuidelines.html">Post Selection Guidelines</a>
+                </li>
+            </ul>
+        </div>
+
+
+
+        <!-- navigation panel -->
+        <div style="text-align: center;height:50px;">
+
+            <span>
+                <a class="link_previous_page"
+                   href="/IndieMushroomForest/IndieDev/GallaryPages/2025/07/BlueSky_indiedev_2025_07_11.html" style="color: cyan;margin: 10px;">&lt;&lt; Previous</a>
+            </span>
+            <span>
+                <a href="/IndieMushroomForest/" style="color: cyan;margin: 10px;">Home</a>
+            </span>
+            <span>
+                <a class="link_next_page"
+                   href="/IndieMushroomForest/IndieDev/GallaryPages/2025/07/BlueSky_indiedev_2025_07_13.html" style="color: cyan;margin: 10px;">
+                    Next &gt;&gt;
+                </a>
+            </span>
+        </div>
+
+
+
+
+
+        <!-- Support -->
+        <div style="align-self: center;align-content: center;align-items: center;text-align: right;">
+            <a href="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/SubPages/Support.html"
+               style="text-decoration:none">
+                <img src="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/Resources/Images/Patreon%20logo.png" style="max-width: 20px;border-radius: 5px;">
+                <img src="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/Resources/Images/kofi%20logo.png" style="max-width: 20px;border-radius: 5px;">
+                <img src="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/Resources/Images/paypal%20logo.png" style="max-width: 20px;border-radius: 5px;background-color: white;">
             </a>
-        </span>
-    </div>
+        </div>
 
-
-
-
-    <!-- Support -->
-    <div style="align-self: center;align-content: center;align-items: center;text-align: right;">
-        <a href="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/SubPages/Support.html"
-           style="text-decoration:none">
-            <img src="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/Resources/Images/Patreon%20logo.png" style="max-width: 20px;border-radius: 5px;">
-            <img src="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/Resources/Images/kofi%20logo.png" style="max-width: 20px;border-radius: 5px;">
-            <img src="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/Resources/Images/paypal%20logo.png" style="max-width: 20px;border-radius: 5px;background-color: white;">
-        </a>
     </div>
 
 
@@ -5927,9 +5822,16 @@
         </div>
     </div>
 
+
     <!-- script -->
-    <script src="/IndieMushroomForest/IndieDev/Resources/Javascript/jquery-3.7.1.min.js"></script>
-    <script src="/IndieMushroomForest/IndieDev/Resources/Javascript/SharedLib.min.js?ts=638926073311393821"></script>
-    <script src="/IndieMushroomForest/IndieDev/Resources/Javascript/BlueSky_ImageGallery.min.js?ts=638926073311393821"></script>
+    <div id="scriptGroup">
+
+        <script src="/IndieMushroomForest/IndieDev/Resources/Javascript/jquery-3.7.1.min.js"></script>
+        <script src="/IndieMushroomForest/IndieDev/Resources/Javascript/SharedLib.min.js?ts=638926828506378871"></script>
+        <script src="/IndieMushroomForest/IndieDev/Resources/Javascript/BlueSky_ImageGallery.min.js?ts=638926828506378871"></script>
+
+    </div>
+
+
 </body>
 </html>

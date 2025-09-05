@@ -5,171 +5,57 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            background-color: #112;
-        }
+    <link rel="stylesheet" href="/IndieMushroomForest/IndieDev/Resources/Css/Bluesky_IndieDev_ImageGallery.min.css">
 
-
-
-        .videoIcon {
-            width: 25px;
-            height: 25px;
-            color: green;
-            position: absolute;
-            left: 0px;
-            bottom: 0px;
-        }
-
-
-
-        .entryContainer {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 10px;
-        }
-
-
-            .entryContainer > div:nth-child(odd) {
-                border: 3px solid #636316;
-            }
-
-            .entryContainer > div:nth-child(even) {
-                border: 3px solid #1d5b2a;
-            }
-
-        .entryDiv {
-            position: relative;
-            gap: 10px;
-            margin: 0px 0px;
-            padding: 10px;
-            max-width: 90vw;
-        }
-
-        .gallery {
-            justify-content: center;
-            align-items: center;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            min-height: 200px;
-        }
-
-            .gallery img {
-                height: auto;
-                display: block;
-                margin: 0 auto;
-                max-height: 80vh;
-                max-width: 100%;
-            }
-
-        .img_thumbnails {
-            max-width: 90vw;
-        }
-
-        .entryDiv:hover .closeIcon {
-            display: block;
-        }
-
-        .closeIcon {
-            width: 25px;
-            height: 25px;
-            position: absolute;
-            right: 0px;
-            top: 0px;
-        }
-
-        .entryDiv:hover .saveIcon {
-            display: block;
-        }
-
-        .saveIcon {
-            width: 25px;
-            height: 25px;
-            position: absolute;
-            right: 0px;
-            top: 0px;
-        }
-
-        @media (min-width: 1000px) {
-
-
-            .entryContainer {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 10px;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .entryDiv {
-                max-width: auto;
-            }
-
-            .gallery {
-                min-height: 250px;
-            }
-
-                .gallery img {
-                    height: auto;
-                    max-width: 30vw;
-                    max-height: 200px;
-                    display: block;
-                }
-
-            .closeIcon {
-                display: none;
-            }
-
-            .saveIcon {
-                display: none;
-            }
-        }
-
-        .hiddenResource {
-            display: none;
-            height: 0px;
-        }
-
-        a {
-            color: cyan;
-            text-decoration: none;
-        }
-    </style>
+    <!--<link rel="stylesheet" href="/IndieMushroomForest/IndieDev/Resources/NoPushTempWork/Css/Bluesky_IndieDev_ImageGallery.css">-->
 
 </head>
 
 
 <body style="Color:silver;">
-    <h1 style="Color:silver;text-align: center;margin:0px;">
-        BlueSky Quick Recap #indiedev 2025-08-02
-    </h1>
-    <!-- save post info -->
-    <div style="text-align:right;margin:10px;">
-        <span>Saved Post Num:</span> <span class="NumSavedPost">---</span>
+
+    <div class="topInfoPanel">
+        <h1 style="Color:silver;text-align: center;margin:0px;">
+            BlueSky Quick Recap #indiedev 2025-08-02
+        </h1>
+        <!-- save post info -->
+        <div style="display:flex; justify-content:space-between; align-items:center; margin:10px;">
+            <label>
+                <input id="checkbox_showSavedPost" type="checkbox"> Show Only Saved Posts
+            </label>
+
+            <span>
+                Saved Post Num: <span class="NumSavedPost">---</span>
+            </span>
+        </div>
+
+        <!-- navigation panel -->
+        <div class="navigationPanel">
+            <span>
+                <a class="link_previous_page"
+                   href="/IndieMushroomForest/IndieDev/GallaryPages/2025/08/BlueSky_indiedev_2025_08_01.html"
+                   style="color: cyan;margin: 10px;">&lt;&lt; Previous</a>
+            </span>
+            <span>
+                <a href="/IndieMushroomForest/"
+                   style="color: cyan;margin: 10px;">Home</a>
+            </span>
+            <span>
+                <a class="link_next_page"
+                   href="/IndieMushroomForest/IndieDev/GallaryPages/2025/08/BlueSky_indiedev_2025_08_03.html"
+                   style="color: cyan;margin: 10px;">
+                    Next &gt;&gt;
+                </a>
+            </span>
+        </div>
+
+
+        <!-- thumbnails tilesmap -->
+        <div style="text-align:center;">
+            <img class="img_thumbnails" src="TileMap_2025_08_02.jpg" />
+        </div>
     </div>
 
-    <!-- navigation panel -->
-    <div style="text-align: center;margin-bottom:10px;">
-        <span>
-            <a class="link_previous_page"
-               href="/IndieMushroomForest/IndieDev/GallaryPages/2025/08/BlueSky_indiedev_2025_08_01.html" style="color: cyan;margin: 10px;">&lt;&lt; Previous</a>
-        </span>
-        <span>
-            <a href="/IndieMushroomForest/" style="color: cyan;margin: 10px;">Home</a>
-        </span>
-        <span>
-            <a class="link_next_page"
-               href="/IndieMushroomForest/IndieDev/GallaryPages/2025/08/BlueSky_indiedev_2025_08_03.html" style="color: cyan;margin: 10px;">
-                Next &gt;&gt;
-            </a>
-        </span>
-    </div>
-
-    <!-- thumbnails tilesmap -->
-    <div style="text-align:center;">
-        <img class="img_thumbnails" src="TileMap_2025_08_02.jpg" />
-    </div>
 
 
     <div id="panel_displayContainer" class="entryContainer">
@@ -417,12 +303,6 @@
                         
                                 <div class="gallery">
                                     
-                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:f6mqdb3svllicxobv35m564a/bafkreid7w72go2tovuyav52jjhvkf4y6einclhgorqfbeqmhashrfugzaa@jpeg" loading="lazy">
-                                        
-                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:f6mqdb3svllicxobv35m564a/bafkreic65fdzcadhrfwkwicrgzzjzyueqat6pg2bmmqoylydcl5ykh6xpy@jpeg" loading="lazy">
-                                        
-                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:f6mqdb3svllicxobv35m564a/bafkreidutyyguogu6cavolcwhsxihvtvo5owqbg4skuhk2s5urjvycy5fm@jpeg" loading="lazy">
-                                        
                                         <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:f6mqdb3svllicxobv35m564a/bafkreiary5k3qmsl5pogombx6kdfwg2n46rhar3exygry53vie2z5acfgi@jpeg" loading="lazy">
                                         
                                 </div>
@@ -569,35 +449,6 @@
                                 <div class="gallery">
                                     
                                         <img src="https://video.bsky.app/watch/did%3Aplc%3A23mw2sk2ag5qhskskug7atgp/bafkreieaytwqaurhclmaebjbsykgksbcdof2pkknrvfqpnx62apntxqsp4/thumbnail.jpg" loading="lazy">
-                                        
-                                </div>
-                
-                                
-                    </a>
-                </div>
-                
-                <div class="entryDiv">
-                    <a href="https://bsky.app/profile/mobilelast.bsky.social/post/3lvg2x3xrxc2l" target="_blank">
-                        
-                                <div class="videoIcon">
-                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
-                                         xmlns="http://www.w3.org/2000/svg"
-                                         xmlns:xlink="http://www.w3.org/1999/xlink"
-                                         viewBox="-120 -120 1440.00 1440.00"
-                                         enable-background="new 0 0 1200 1200"
-                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
-                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
-                                            </g>
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
-                					</svg>
-                                </div>
-                                
-                        
-                                <div class="gallery">
-                                    
-                                        <img src="https://video.bsky.app/watch/did%3Aplc%3Azpqbiwdos6x7oir73rn5coas/bafkreic7k5zo7pxshgdk7oua2cki72csnmjqjo3tau57sjnnu6fu5rp6zy/thumbnail.jpg" loading="lazy">
                                         
                                 </div>
                 
@@ -916,35 +767,6 @@
                                 <div class="gallery">
                                     
                                         <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:tweq4v7rpru5w7j373mdmuvo/bafkreifu3jur6y5k6ci5z7jcpuozblbsl25fl5mwspchol5iinrqwebppa@jpeg" loading="lazy">
-                                        
-                                </div>
-                
-                                
-                    </a>
-                </div>
-                
-                <div class="entryDiv">
-                    <a href="https://bsky.app/profile/playtester.io/post/3lvgdriw25z2q" target="_blank">
-                        
-                                <div class="videoIcon">
-                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
-                                         xmlns="http://www.w3.org/2000/svg"
-                                         xmlns:xlink="http://www.w3.org/1999/xlink"
-                                         viewBox="-120 -120 1440.00 1440.00"
-                                         enable-background="new 0 0 1200 1200"
-                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
-                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
-                                            </g>
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
-                					</svg>
-                                </div>
-                                
-                        
-                                <div class="gallery">
-                                    
-                                        <img src="https://video.bsky.app/watch/did%3Aplc%3Azp2xmz3bltla22y7y5ofheb6/bafkreidblz3gbiutncwhfo6vfotmlghgvlggfu6o2jiafgtzwwurfcribm/thumbnail.jpg" loading="lazy">
                                         
                                 </div>
                 
@@ -1320,35 +1142,6 @@
                 </div>
                 
                 <div class="entryDiv">
-                    <a href="https://bsky.app/profile/cocosrevenge.bsky.social/post/3lvgnhkz4yt2d" target="_blank">
-                        
-                                <div class="videoIcon">
-                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
-                                         xmlns="http://www.w3.org/2000/svg"
-                                         xmlns:xlink="http://www.w3.org/1999/xlink"
-                                         viewBox="-120 -120 1440.00 1440.00"
-                                         enable-background="new 0 0 1200 1200"
-                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
-                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
-                                            </g>
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
-                					</svg>
-                                </div>
-                                
-                        
-                                <div class="gallery">
-                                    
-                                        <img src="https://video.bsky.app/watch/did%3Aplc%3Aqz2rltuhfuodbl7c2h2eurmx/bafkreicjyeisxeuqkwmuj4cd3ttlegr2r2urdnxuiijzfzdrvlc2f65jqe/thumbnail.jpg" loading="lazy">
-                                        
-                                </div>
-                
-                                
-                    </a>
-                </div>
-                
-                <div class="entryDiv">
                     <a href="https://bsky.app/profile/conmaned.bsky.social/post/3lvgnanenks2h" target="_blank">
                         
                         
@@ -1493,35 +1286,6 @@
                 </div>
                 
                 <div class="entryDiv">
-                    <a href="https://bsky.app/profile/playtester.io/post/3lvgact4j272t" target="_blank">
-                        
-                                <div class="videoIcon">
-                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
-                                         xmlns="http://www.w3.org/2000/svg"
-                                         xmlns:xlink="http://www.w3.org/1999/xlink"
-                                         viewBox="-120 -120 1440.00 1440.00"
-                                         enable-background="new 0 0 1200 1200"
-                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
-                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
-                                            </g>
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
-                					</svg>
-                                </div>
-                                
-                        
-                                <div class="gallery">
-                                    
-                                        <img src="https://video.bsky.app/watch/did%3Aplc%3Azp2xmz3bltla22y7y5ofheb6/bafkreiavgdzoalvvpdctrjptgqdz6cnxz26jzs3g7hkw2efwczhr5dl2ei/thumbnail.jpg" loading="lazy">
-                                        
-                                </div>
-                
-                                
-                    </a>
-                </div>
-                
-                <div class="entryDiv">
                     <a href="https://bsky.app/profile/almear.bsky.social/post/3lvg7ivzzmk2p" target="_blank">
                         
                                 <div class="videoIcon">
@@ -1557,8 +1321,6 @@
                                 <div class="gallery">
                                     
                                         <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ozzsaqev7fs6lrzl7kfyfdzf/bafkreih5h2xr36s6ghhcoxxhzlewrj4wtnulp5vsynw2whol3lmimgw3ai@jpeg" loading="lazy">
-                                        
-                                        <img src="https://cdn.bsky.app/img/avatar_thumbnail/plain/did:plc:ozzsaqev7fs6lrzl7kfyfdzf/bafkreihbpioir5sj2dnj4gm7ygdtx74lypssaiu5wsl2apevqodum35eia@jpeg" loading="lazy">
                                         
                                         <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ozzsaqev7fs6lrzl7kfyfdzf/bafkreide2eaqwgrosjhjr7nhezm75zyqf4mk2qtxnlcrmd6d4wqec44bfa@jpeg" loading="lazy">
                                         
@@ -1652,8 +1414,6 @@
                         
                                 <div class="gallery">
                                     
-                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:usgpjw3br2hpu3avydnwq5fj/bafkreifzghkprkkszblpp3zl5ebuylbpz7ifp7dcxtnecu7vqv4yudgkaq@jpeg" loading="lazy">
-                                        
                                         <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:usgpjw3br2hpu3avydnwq5fj/bafkreie55i4kvwb2l7xwofnpxeiykvp6obuuberx2vkzfa3bftekpjugei@jpeg" loading="lazy">
                                         
                                         <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:usgpjw3br2hpu3avydnwq5fj/bafkreicawefulbppsasrwb2hd5qseen2olibuqbw3vmmrsb6ppim4kdq6m@jpeg" loading="lazy">
@@ -2096,35 +1856,6 @@
                 </div>
                 
                 <div class="entryDiv">
-                    <a href="https://bsky.app/profile/playtester.io/post/3lvfurh4nax2e" target="_blank">
-                        
-                                <div class="videoIcon">
-                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
-                                         xmlns="http://www.w3.org/2000/svg"
-                                         xmlns:xlink="http://www.w3.org/1999/xlink"
-                                         viewBox="-120 -120 1440.00 1440.00"
-                                         enable-background="new 0 0 1200 1200"
-                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
-                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
-                                            </g>
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
-                					</svg>
-                                </div>
-                                
-                        
-                                <div class="gallery">
-                                    
-                                        <img src="https://video.bsky.app/watch/did%3Aplc%3Azp2xmz3bltla22y7y5ofheb6/bafkreicsxxm72u5xwz4gdx3ur2lo4yyacdie6ce5zl7qaz36ncn2l5rckm/thumbnail.jpg" loading="lazy">
-                                        
-                                </div>
-                
-                                
-                    </a>
-                </div>
-                
-                <div class="entryDiv">
                     <a href="https://bsky.app/profile/paltian2.bsky.social/post/3lvfthxgrl22q" target="_blank">
                         
                         
@@ -2269,64 +2000,6 @@
                                 <div class="gallery">
                                     
                                         <img src="https://video.bsky.app/watch/did%3Aplc%3A37o7pdo7octt2z2aqavcscyr/bafkreiend7h4v2ubdlq5vnbrvrf4knx7ckagdbp6wtl2k54p6zx24xkh3e/thumbnail.jpg" loading="lazy">
-                                        
-                                </div>
-                
-                                
-                    </a>
-                </div>
-                
-                <div class="entryDiv">
-                    <a href="https://bsky.app/profile/playtester.io/post/3lvgw2rkpio2x" target="_blank">
-                        
-                                <div class="videoIcon">
-                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
-                                         xmlns="http://www.w3.org/2000/svg"
-                                         xmlns:xlink="http://www.w3.org/1999/xlink"
-                                         viewBox="-120 -120 1440.00 1440.00"
-                                         enable-background="new 0 0 1200 1200"
-                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
-                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
-                                            </g>
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
-                					</svg>
-                                </div>
-                                
-                        
-                                <div class="gallery">
-                                    
-                                        <img src="https://video.bsky.app/watch/did%3Aplc%3Azp2xmz3bltla22y7y5ofheb6/bafkreidayq66uc4nadg3uclichvammtmxbjqu2gbaadrhxj6sw5f4hpj7y/thumbnail.jpg" loading="lazy">
-                                        
-                                </div>
-                
-                                
-                    </a>
-                </div>
-                
-                <div class="entryDiv">
-                    <a href="https://bsky.app/profile/playtester.io/post/3lvgrrr2qvz2x" target="_blank">
-                        
-                                <div class="videoIcon">
-                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
-                                         xmlns="http://www.w3.org/2000/svg"
-                                         xmlns:xlink="http://www.w3.org/1999/xlink"
-                                         viewBox="-120 -120 1440.00 1440.00"
-                                         enable-background="new 0 0 1200 1200"
-                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
-                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
-                                            </g>
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
-                					</svg>
-                                </div>
-                                
-                        
-                                <div class="gallery">
-                                    
-                                        <img src="https://video.bsky.app/watch/did%3Aplc%3Azp2xmz3bltla22y7y5ofheb6/bafkreiehivn5xmd7g7lenuz5xogfrfd2yrlmvv7y7buqenky66a6qydmny/thumbnail.jpg" loading="lazy">
                                         
                                 </div>
                 
@@ -2645,35 +2318,6 @@
                                 <div class="gallery">
                                     
                                         <img src="https://video.bsky.app/watch/did%3Aplc%3Aljfxfynq5fvu5umt6xu7khpn/bafkreihmnudghbej2w6fq7oed3v75kqby6h4rwxjljgxtkryqbvz2mui64/thumbnail.jpg" loading="lazy">
-                                        
-                                </div>
-                
-                                
-                    </a>
-                </div>
-                
-                <div class="entryDiv">
-                    <a href="https://bsky.app/profile/playtester.io/post/3lvfs5jvg7k2t" target="_blank">
-                        
-                                <div class="videoIcon">
-                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
-                                         xmlns="http://www.w3.org/2000/svg"
-                                         xmlns:xlink="http://www.w3.org/1999/xlink"
-                                         viewBox="-120 -120 1440.00 1440.00"
-                                         enable-background="new 0 0 1200 1200"
-                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
-                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
-                                            </g>
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
-                					</svg>
-                                </div>
-                                
-                        
-                                <div class="gallery">
-                                    
-                                        <img src="https://video.bsky.app/watch/did%3Aplc%3Azp2xmz3bltla22y7y5ofheb6/bafkreibvi5n64nqcohgeolwbtpf4uht47apmqvnganoxus7qmn4trzbjoy/thumbnail.jpg" loading="lazy">
                                         
                                 </div>
                 
@@ -3180,35 +2824,6 @@
                 </div>
                 
                 <div class="entryDiv">
-                    <a href="https://bsky.app/profile/horizonsofachaea.bsky.social/post/3lvgrezzxbc2d" target="_blank">
-                        
-                                <div class="videoIcon">
-                                    <svg xmlns:svg="http://www.w3.org/2000/svg"
-                                         xmlns="http://www.w3.org/2000/svg"
-                                         xmlns:xlink="http://www.w3.org/1999/xlink"
-                                         viewBox="-120 -120 1440.00 1440.00"
-                                         enable-background="new 0 0 1200 1200"
-                                         xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
-                                    <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000" strokewidth="0"></rect>
-                                            </g>
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                    <g id="SVGRepo_iconCarrier"> <path id="path25187" inkscape:connector-curvature="0" d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z"></path> </g>
-                					</svg>
-                                </div>
-                                
-                        
-                                <div class="gallery">
-                                    
-                                        <img src="https://video.bsky.app/watch/did%3Aplc%3Aeha5qxrgmrvkovzfq3yr4ham/bafkreiguvawlb4hwcbbmm2qon2ayw2zrctu2fgxb7h6up3hazvt77k3cpa/thumbnail.jpg" loading="lazy">
-                                        
-                                </div>
-                
-                                
-                    </a>
-                </div>
-                
-                <div class="entryDiv">
                     <a href="https://bsky.app/profile/vesoljafunk.bsky.social/post/3lvgr433zy226" target="_blank">
                         
                                 <div class="videoIcon">
@@ -3500,50 +3115,59 @@
                 
     </div>
 
-    <!--Extra info -->
-    <div style="color: silver;">
-        <ul>
-            <li>
-                <span>Time Range: </span> <span>02 Aug 2025</span>
-            </li>
-            <li>Total Number of Post: 623+  </li>
-            <li>Number of Post Displayed: 125  </li>
-            <li>
-                <a href="/IndieMushroomForest/IndieDev/SubPages/PostSelectionGuidelines.html">Post Selection Guidelines</a>
-            </li>
-        </ul>
-    </div>
 
 
-    <!-- navigation panel -->
-    <div style="text-align: center;height:50px;">
+    <!-- bottom info panel -->
+    <div class="bottomInfoPanel">
 
-        <span>
-            <a class="link_previous_page"
-               href="/IndieMushroomForest/IndieDev/GallaryPages/2025/08/BlueSky_indiedev_2025_08_01.html" style="color: cyan;margin: 10px;">&lt;&lt; Previous</a>
-        </span>
-        <span>
-            <a href="/IndieMushroomForest/" style="color: cyan;margin: 10px;">Home</a>
-        </span>
-        <span>
-            <a class="link_next_page"
-               href="/IndieMushroomForest/IndieDev/GallaryPages/2025/08/BlueSky_indiedev_2025_08_03.html" style="color: cyan;margin: 10px;">
-                Next &gt;&gt;
+        <!--Extra info -->
+        <div style="color: silver;">
+            <ul>
+                <li>
+                    <span>Time Range: </span> <span>02 Aug 2025</span>
+                </li>
+                <li>Total Number of Post: 623+  </li>
+                <li>Number of Post Displayed: 116  </li>
+                <li>
+                    <a href="/IndieMushroomForest/IndieDev/SubPages/PostSelectionGuidelines.html">Post Selection Guidelines</a>
+                </li>
+            </ul>
+        </div>
+
+
+
+        <!-- navigation panel -->
+        <div style="text-align: center;height:50px;">
+
+            <span>
+                <a class="link_previous_page"
+                   href="/IndieMushroomForest/IndieDev/GallaryPages/2025/08/BlueSky_indiedev_2025_08_01.html" style="color: cyan;margin: 10px;">&lt;&lt; Previous</a>
+            </span>
+            <span>
+                <a href="/IndieMushroomForest/" style="color: cyan;margin: 10px;">Home</a>
+            </span>
+            <span>
+                <a class="link_next_page"
+                   href="/IndieMushroomForest/IndieDev/GallaryPages/2025/08/BlueSky_indiedev_2025_08_03.html" style="color: cyan;margin: 10px;">
+                    Next &gt;&gt;
+                </a>
+            </span>
+        </div>
+
+
+
+
+
+        <!-- Support -->
+        <div style="align-self: center;align-content: center;align-items: center;text-align: right;">
+            <a href="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/SubPages/Support.html"
+               style="text-decoration:none">
+                <img src="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/Resources/Images/Patreon%20logo.png" style="max-width: 20px;border-radius: 5px;">
+                <img src="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/Resources/Images/kofi%20logo.png" style="max-width: 20px;border-radius: 5px;">
+                <img src="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/Resources/Images/paypal%20logo.png" style="max-width: 20px;border-radius: 5px;background-color: white;">
             </a>
-        </span>
-    </div>
+        </div>
 
-
-
-
-    <!-- Support -->
-    <div style="align-self: center;align-content: center;align-items: center;text-align: right;">
-        <a href="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/SubPages/Support.html"
-           style="text-decoration:none">
-            <img src="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/Resources/Images/Patreon%20logo.png" style="max-width: 20px;border-radius: 5px;">
-            <img src="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/Resources/Images/kofi%20logo.png" style="max-width: 20px;border-radius: 5px;">
-            <img src="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/Resources/Images/paypal%20logo.png" style="max-width: 20px;border-radius: 5px;background-color: white;">
-        </a>
     </div>
 
 
@@ -3601,9 +3225,16 @@
         </div>
     </div>
 
+
     <!-- script -->
-    <script src="/IndieMushroomForest/IndieDev/Resources/Javascript/jquery-3.7.1.min.js"></script>
-    <script src="/IndieMushroomForest/IndieDev/Resources/Javascript/SharedLib.min.js?ts=638926073370737903"></script>
-    <script src="/IndieMushroomForest/IndieDev/Resources/Javascript/BlueSky_ImageGallery.min.js?ts=638926073370737903"></script>
+    <div id="scriptGroup">
+
+        <script src="/IndieMushroomForest/IndieDev/Resources/Javascript/jquery-3.7.1.min.js"></script>
+        <script src="/IndieMushroomForest/IndieDev/Resources/Javascript/SharedLib.min.js?ts=638926828566326190"></script>
+        <script src="/IndieMushroomForest/IndieDev/Resources/Javascript/BlueSky_ImageGallery.min.js?ts=638926828566326190"></script>
+
+    </div>
+
+
 </body>
 </html>

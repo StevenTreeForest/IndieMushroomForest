@@ -5,171 +5,57 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            background-color: #112;
-        }
+    <link rel="stylesheet" href="/IndieMushroomForest/IndieDev/Resources/Css/Bluesky_IndieDev_ImageGallery.min.css">
 
-
-
-        .videoIcon {
-            width: 25px;
-            height: 25px;
-            color: green;
-            position: absolute;
-            left: 0px;
-            bottom: 0px;
-        }
-
-
-
-        .entryContainer {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 10px;
-        }
-
-
-            .entryContainer > div:nth-child(odd) {
-                border: 3px solid #636316;
-            }
-
-            .entryContainer > div:nth-child(even) {
-                border: 3px solid #1d5b2a;
-            }
-
-        .entryDiv {
-            position: relative;
-            gap: 10px;
-            margin: 0px 0px;
-            padding: 10px;
-            max-width: 90vw;
-        }
-
-        .gallery {
-            justify-content: center;
-            align-items: center;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            min-height: 200px;
-        }
-
-            .gallery img {
-                height: auto;
-                display: block;
-                margin: 0 auto;
-                max-height: 80vh;
-                max-width: 100%;
-            }
-
-        .img_thumbnails {
-            max-width: 90vw;
-        }
-
-        .entryDiv:hover .closeIcon {
-            display: block;
-        }
-
-        .closeIcon {
-            width: 25px;
-            height: 25px;
-            position: absolute;
-            right: 0px;
-            top: 0px;
-        }
-
-        .entryDiv:hover .saveIcon {
-            display: block;
-        }
-
-        .saveIcon {
-            width: 25px;
-            height: 25px;
-            position: absolute;
-            right: 0px;
-            top: 0px;
-        }
-
-        @media (min-width: 1000px) {
-
-
-            .entryContainer {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 10px;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .entryDiv {
-                max-width: auto;
-            }
-
-            .gallery {
-                min-height: 250px;
-            }
-
-                .gallery img {
-                    height: auto;
-                    max-width: 30vw;
-                    max-height: 200px;
-                    display: block;
-                }
-
-            .closeIcon {
-                display: none;
-            }
-
-            .saveIcon {
-                display: none;
-            }
-        }
-
-        .hiddenResource {
-            display: none;
-            height: 0px;
-        }
-
-        a {
-            color: cyan;
-            text-decoration: none;
-        }
-    </style>
+    <!--<link rel="stylesheet" href="/IndieMushroomForest/IndieDev/Resources/NoPushTempWork/Css/Bluesky_IndieDev_ImageGallery.css">-->
 
 </head>
 
 
 <body style="Color:silver;">
-    <h1 style="Color:silver;text-align: center;margin:0px;">
-        BlueSky Quick Recap #indiedev 2025-07-19
-    </h1>
-    <!-- save post info -->
-    <div style="text-align:right;margin:10px;">
-        <span>Saved Post Num:</span> <span class="NumSavedPost">---</span>
+
+    <div class="topInfoPanel">
+        <h1 style="Color:silver;text-align: center;margin:0px;">
+            BlueSky Quick Recap #indiedev 2025-07-19
+        </h1>
+        <!-- save post info -->
+        <div style="display:flex; justify-content:space-between; align-items:center; margin:10px;">
+            <label>
+                <input id="checkbox_showSavedPost" type="checkbox"> Show Only Saved Posts
+            </label>
+
+            <span>
+                Saved Post Num: <span class="NumSavedPost">---</span>
+            </span>
+        </div>
+
+        <!-- navigation panel -->
+        <div class="navigationPanel">
+            <span>
+                <a class="link_previous_page"
+                   href="/IndieMushroomForest/IndieDev/GallaryPages/2025/07/BlueSky_indiedev_2025_07_18.html"
+                   style="color: cyan;margin: 10px;">&lt;&lt; Previous</a>
+            </span>
+            <span>
+                <a href="/IndieMushroomForest/"
+                   style="color: cyan;margin: 10px;">Home</a>
+            </span>
+            <span>
+                <a class="link_next_page"
+                   href="/IndieMushroomForest/IndieDev/GallaryPages/2025/07/BlueSky_indiedev_2025_07_20.html"
+                   style="color: cyan;margin: 10px;">
+                    Next &gt;&gt;
+                </a>
+            </span>
+        </div>
+
+
+        <!-- thumbnails tilesmap -->
+        <div style="text-align:center;">
+            <img class="img_thumbnails" src="TileMap_2025_07_19.jpg" />
+        </div>
     </div>
 
-    <!-- navigation panel -->
-    <div style="text-align: center;margin-bottom:10px;">
-        <span>
-            <a class="link_previous_page"
-               href="/IndieMushroomForest/IndieDev/GallaryPages/2025/07/BlueSky_indiedev_2025_07_18.html" style="color: cyan;margin: 10px;">&lt;&lt; Previous</a>
-        </span>
-        <span>
-            <a href="/IndieMushroomForest/" style="color: cyan;margin: 10px;">Home</a>
-        </span>
-        <span>
-            <a class="link_next_page"
-               href="/IndieMushroomForest/IndieDev/GallaryPages/2025/07/BlueSky_indiedev_2025_07_20.html" style="color: cyan;margin: 10px;">
-                Next &gt;&gt;
-            </a>
-        </span>
-    </div>
-
-    <!-- thumbnails tilesmap -->
-    <div style="text-align:center;">
-        <img class="img_thumbnails" src="TileMap_2025_07_19.jpg" />
-    </div>
 
 
     <div id="panel_displayContainer" class="entryContainer">
@@ -238,27 +124,7 @@
                         
                                 <div class="gallery">
                                     
-                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:nawzxd7cbzcpsrq4qzi4pfhq/bafkreihsir2z2mfbsuncox3ejpvongezawivindbysdinatiuc5rgu72hm@jpeg" loading="lazy">
-                                        
-                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:nawzxd7cbzcpsrq4qzi4pfhq/bafkreier3zwpyioahcvhfpkdbhwr6rtcp4mfdjlkcg5oivuu25lgd2bdua@jpeg" loading="lazy">
-                                        
-                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:nawzxd7cbzcpsrq4qzi4pfhq/bafkreibc7wp4vlvra7fsubq7c6efc6rhqhkzbudfuffahmc67whamj7tkm@jpeg" loading="lazy">
-                                        
                                         <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:nawzxd7cbzcpsrq4qzi4pfhq/bafkreiatwfykoeabc3tulh52i4ugxtatjo5eyfpt4w5s2fjn2ipbqr36oq@jpeg" loading="lazy">
-                                        
-                                </div>
-                
-                                
-                    </a>
-                </div>
-                
-                <div class="entryDiv">
-                    <a href="https://bsky.app/profile/vanny96.bsky.social/post/3lud5xxqqnc2l" target="_blank">
-                        
-                        
-                                <div class="gallery">
-                                    
-                                        <img src="https://video.bsky.app/watch/did%3Aplc%3Aehdutonskc7hsle3hctmb7cv/bafkreigxbo5mx5l6uajps5yiz6ftxc4apbzdbsytpnskty2v3onvkokdde/thumbnail.jpg" loading="lazy">
                                         
                                 </div>
                 
@@ -465,20 +331,6 @@
                 </div>
                 
                 <div class="entryDiv">
-                    <a href="https://bsky.app/profile/sunnytrailsgame.bsky.social/post/3ludgjofj3k2x" target="_blank">
-                        
-                        
-                                <div class="gallery">
-                                    
-                                        <img src="https://video.bsky.app/watch/did%3Aplc%3A2rxmn3lmc6tk4yeo32whid7q/bafkreigstlkm42nzm6rm6giaywbgrrxyve77g42zga7ouh24i5mx2kpimy/thumbnail.jpg" loading="lazy">
-                                        
-                                </div>
-                
-                                
-                    </a>
-                </div>
-                
-                <div class="entryDiv">
                     <a href="https://bsky.app/profile/wurmfud.itch.io/post/3ludfzllh622p" target="_blank">
                         
                         
@@ -561,20 +413,6 @@
                                 <div class="gallery">
                                     
                                         <img src="https://video.bsky.app/watch/did%3Aplc%3Aqlhzgah5p5utvb6xompqkvgn/bafkreia6sqbgtihtbfmtyws52ssu2rmjksqc4uh7vlwadbpcfdcvxrf73e/thumbnail.jpg" loading="lazy">
-                                        
-                                </div>
-                
-                                
-                    </a>
-                </div>
-                
-                <div class="entryDiv">
-                    <a href="https://bsky.app/profile/vanny96.bsky.social/post/3lucsbh2mgc2k" target="_blank">
-                        
-                        
-                                <div class="gallery">
-                                    
-                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ehdutonskc7hsle3hctmb7cv/bafkreieuelgqdzmgtknv55sl26zc2sf7pk2elc242bipyyka2pord7efqy@jpeg" loading="lazy">
                                         
                                 </div>
                 
@@ -729,20 +567,6 @@
                 </div>
                 
                 <div class="entryDiv">
-                    <a href="https://bsky.app/profile/steamydev.bsky.social/post/3ludn5ol65s2c" target="_blank">
-                        
-                        
-                                <div class="gallery">
-                                    
-                                        <img src="https://video.bsky.app/watch/did%3Aplc%3Aatkcie4bpdeb3fz3watapuv3/bafkreia5hrmptbqcs4q7hnz246micqmtyrcjmzegct4qz7e22c76phfcr4/thumbnail.jpg" loading="lazy">
-                                        
-                                </div>
-                
-                                
-                    </a>
-                </div>
-                
-                <div class="entryDiv">
                     <a href="https://bsky.app/profile/jakub-neruda.techhub.social.ap.brid.gy/post/3ludml5l6d6b2" target="_blank">
                         
                         
@@ -883,20 +707,6 @@
                                 <div class="gallery">
                                     
                                         <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:tyfkxzp3a4o2sfmayv33cahx/bafkreidvyizybvqrmxaniyysqoil4e5cbxxs7hmi34eif63khmxr3nd4am@jpeg" loading="lazy">
-                                        
-                                </div>
-                
-                                
-                    </a>
-                </div>
-                
-                <div class="entryDiv">
-                    <a href="https://bsky.app/profile/dominikhackl.bsky.social/post/3lud6y5yzyk2n" target="_blank">
-                        
-                        
-                                <div class="gallery">
-                                    
-                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:tmckonau2ka6qehciwtj4eu6/bafkreidseknoi23ig6aii3o63umjn5qil5itw5gc5i4icmcovaxzpzsl6e@jpeg" loading="lazy">
                                         
                                 </div>
                 
@@ -1189,20 +999,6 @@
                 </div>
                 
                 <div class="entryDiv">
-                    <a href="https://bsky.app/profile/parasolmushroom.bsky.social/post/3ludcabxrq22w" target="_blank">
-                        
-                        
-                                <div class="gallery">
-                                    
-                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:kbg7ab2wkphlzzgcw4yptflc/bafkreiflhrxqoueiy7vajml7hpczqqmghnynpkhiqhnbjiepge6lboelpi@jpeg" loading="lazy">
-                                        
-                                </div>
-                
-                                
-                    </a>
-                </div>
-                
-                <div class="entryDiv">
                     <a href="https://bsky.app/profile/fullstopstudios.bsky.social/post/3ludamzwgfs2v" target="_blank">
                         
                         
@@ -1363,20 +1159,6 @@
                                         <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:yr4jd56g3t5n6e72dgnex3ap/bafkreiblvw52ghcvfbd5qa7vwkevffnspzuzyfdf4igfihdho3qkbz7orq@jpeg" loading="lazy">
                                         
                                         <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:yr4jd56g3t5n6e72dgnex3ap/bafkreid6wwkj7lds6kpxsmyfryj6ypaci2ojqottkzgxaswwne5w6y5edm@jpeg" loading="lazy">
-                                        
-                                </div>
-                
-                                
-                    </a>
-                </div>
-                
-                <div class="entryDiv">
-                    <a href="https://bsky.app/profile/outbluegames.bsky.social/post/3lucw3ewlc42l" target="_blank">
-                        
-                        
-                                <div class="gallery">
-                                    
-                                        <img src="https://video.bsky.app/watch/did%3Aplc%3Amfcbljkjt722hxm7hndof3u2/bafkreih6p4kbhnw7mw3sgvxxjlngakvtj32eymlfbsitywg6hycl7kt6f4/thumbnail.jpg" loading="lazy">
                                         
                                 </div>
                 
@@ -1699,40 +1481,12 @@
                 </div>
                 
                 <div class="entryDiv">
-                    <a href="https://bsky.app/profile/autoforge.bsky.social/post/3lue5ocx2g22f" target="_blank">
-                        
-                        
-                                <div class="gallery">
-                                    
-                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:s3pjcfllbo63ksy55o4wxuoi/bafkreics5zoutzymkggsje7rm5kdisw3v6jvzebnpl2cukc4wlm7arr6za@jpeg" loading="lazy">
-                                        
-                                </div>
-                
-                                
-                    </a>
-                </div>
-                
-                <div class="entryDiv">
                     <a href="https://bsky.app/profile/bvigaming.bsky.social/post/3luduhhgqis2u" target="_blank">
                         
                         
                                 <div class="gallery">
                                     
                                         <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:gxdlijsvfl2xzjepu3vdd43k/bafkreicmd44evljr7jmtldj4v4wgubpufey2ymikcjxeedjrftv53m4mqa@jpeg" loading="lazy">
-                                        
-                                </div>
-                
-                                
-                    </a>
-                </div>
-                
-                <div class="entryDiv">
-                    <a href="https://bsky.app/profile/winlu.itch.io/post/3ludtbkwows2f" target="_blank">
-                        
-                        
-                                <div class="gallery">
-                                    
-                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:hqix5pgg6xvxb624vg7zse7o/bafkreidpa3pneyhnalufttb5dm6ppwent3pgdi2fihd76fby36k3x2gqim@jpeg" loading="lazy">
                                         
                                 </div>
                 
@@ -1833,20 +1587,6 @@
                                 <div class="gallery">
                                     
                                         <img src="https://video.bsky.app/watch/did%3Aplc%3Amqznde6dd7bmpuiybjoxjarc/bafkreidkhinyhi3qtp3n5qgntizwoiiotwb25so6uxgiqfmnmgwrurwhay/thumbnail.jpg" loading="lazy">
-                                        
-                                </div>
-                
-                                
-                    </a>
-                </div>
-                
-                <div class="entryDiv">
-                    <a href="https://bsky.app/profile/dariuszpietrala.bsky.social/post/3ludc6d5goc2v" target="_blank">
-                        
-                        
-                                <div class="gallery">
-                                    
-                                        <img src="https://video.bsky.app/watch/did%3Aplc%3Avhmxey75m35wl77udyh5lixj/bafkreigrm5ficrz4korvhkcdpo3otmek6l5tqycybvobiowc3p7aw4k4ey/thumbnail.jpg" loading="lazy">
                                         
                                 </div>
                 
@@ -2171,20 +1911,6 @@
                 </div>
                 
                 <div class="entryDiv">
-                    <a href="https://bsky.app/profile/ultracoolhand.bsky.social/post/3lubty65hzc2n" target="_blank">
-                        
-                        
-                                <div class="gallery">
-                                    
-                                        <img src="https://video.bsky.app/watch/did%3Aplc%3Abf2c34dl7lyzxqz3ni6knub2/bafkreih7x6ybaaclumiuz2q3och6p5upap2lortyxtst2oah65h53tpkcq/thumbnail.jpg" loading="lazy">
-                                        
-                                </div>
-                
-                                
-                    </a>
-                </div>
-                
-                <div class="entryDiv">
                     <a href="https://bsky.app/profile/ninesconnect.bsky.social/post/3lubpz3mmxs2e" target="_blank">
                         
                         
@@ -2300,20 +2026,6 @@
                                 <div class="gallery">
                                     
                                         <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:a6yl4q4j5min6e2avekngqo7/bafkreia4auwv26rbsmtsvnj6dd7m6yvctjlbcbzzymdyxpcko7kw7iaeem@jpeg" loading="lazy">
-                                        
-                                </div>
-                
-                                
-                    </a>
-                </div>
-                
-                <div class="entryDiv">
-                    <a href="https://bsky.app/profile/daniel.schemann.net/post/3ludunzflgk2w" target="_blank">
-                        
-                        
-                                <div class="gallery">
-                                    
-                                        <img src="https://video.bsky.app/watch/did%3Aplc%3A6n6dcp4fxcr5yysnaqopcrde/bafkreiegsz4juonffmpchov2enp3rp2v75gfrddsvowtx2t4aqzeo3wuvi/thumbnail.jpg" loading="lazy">
                                         
                                 </div>
                 
@@ -2682,20 +2394,6 @@
                 </div>
                 
                 <div class="entryDiv">
-                    <a href="https://bsky.app/profile/kristala.bsky.social/post/3lucoib4zby2f" target="_blank">
-                        
-                        
-                                <div class="gallery">
-                                    
-                                        <img src="https://video.bsky.app/watch/did%3Aplc%3Aqmswnefybouqsrzhsrl3xoij/bafkreida57xvokmrg6y4o4lg65etp3ns6tcqrno5kwtrj3uhljwka5ktd4/thumbnail.jpg" loading="lazy">
-                                        
-                                </div>
-                
-                                
-                    </a>
-                </div>
-                
-                <div class="entryDiv">
                     <a href="https://bsky.app/profile/foreheadchip.bsky.social/post/3luciefsvuc2h" target="_blank">
                         
                         
@@ -2851,20 +2549,6 @@
                                 <div class="gallery">
                                     
                                         <img src="https://video.bsky.app/watch/did%3Aplc%3Afwy7a3jzkfmdzfyvsmtbdoie/bafkreihfxup3jw3hebmeerrkwlaupqnqa6bpxu7mwxzkjdvrswiefn3mui/thumbnail.jpg" loading="lazy">
-                                        
-                                </div>
-                
-                                
-                    </a>
-                </div>
-                
-                <div class="entryDiv">
-                    <a href="https://bsky.app/profile/valenalvern.bsky.social/post/3lue4wgujgc2v" target="_blank">
-                        
-                        
-                                <div class="gallery">
-                                    
-                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:l3nlqyzvb24esywpgfasekbi/bafkreigyddr6xgudkx643pmvd2njzzskg3kubvhqwviipyjuqni5fmgxtu@jpeg" loading="lazy">
                                         
                                 </div>
                 
@@ -3089,20 +2773,6 @@
                 </div>
                 
                 <div class="entryDiv">
-                    <a href="https://bsky.app/profile/sorcerystory.bsky.social/post/3ludh7m2j6k2p" target="_blank">
-                        
-                        
-                                <div class="gallery">
-                                    
-                                        <img src="https://video.bsky.app/watch/did%3Aplc%3An2mj2tu5iydietgvtcyujxzp/bafkreidwhrfvp77d2i347ougznz2gagtc4maeyidwz6tjdgcwbdj2rvrxe/thumbnail.jpg" loading="lazy">
-                                        
-                                </div>
-                
-                                
-                    </a>
-                </div>
-                
-                <div class="entryDiv">
                     <a href="https://bsky.app/profile/tacsgroup.bsky.social/post/3ludeuqspos2k" target="_blank">
                         
                         
@@ -3122,8 +2792,6 @@
                         
                                 <div class="gallery">
                                     
-                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:pgfzwxqpdj7z44fxr2kkjgmj/bafkreigmukgegcqjeddz2h5qlnkv33n2ctuw5vrn5saz5asfi3el3moa3y@jpeg" loading="lazy">
-                                        
                                         <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:pgfzwxqpdj7z44fxr2kkjgmj/bafkreih6mfhdrqkaz4afnnhj2r3men3yqaiptmco63ofmqg77fayfxo55i@jpeg" loading="lazy">
                                         
                                 </div>
@@ -3255,46 +2923,12 @@
                 </div>
                 
                 <div class="entryDiv">
-                    <a href="https://bsky.app/profile/zoyal1.bsky.social/post/3lue4cawjxs2t" target="_blank">
-                        
-                        
-                                <div class="gallery">
-                                    
-                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:aald6utc4gumuhzerln25mts/bafkreiatfxbdpemwzmfcshhh74pvlmwubb6qg2sc3lx75nw6hfoxi4jnii@jpeg" loading="lazy">
-                                        
-                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:aald6utc4gumuhzerln25mts/bafkreig4db5joncchqxn3iap3uwl374mz5wofoobcrwgc7zqzbkqglcgpi@jpeg" loading="lazy">
-                                        
-                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:aald6utc4gumuhzerln25mts/bafkreicmoubz4qlchvsubzwc5h6ldqs6yb64budbpgtrj3rt57grxr4cru@jpeg" loading="lazy">
-                                        
-                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:aald6utc4gumuhzerln25mts/bafkreigyd7a3mmfdw4okvk6nt2yiqylptrwganpfcj62ys6nsrkzik3ugm@jpeg" loading="lazy">
-                                        
-                                </div>
-                
-                                
-                    </a>
-                </div>
-                
-                <div class="entryDiv">
                     <a href="https://bsky.app/profile/chrisscheidig.bsky.social/post/3ludz2tqpgk2w" target="_blank">
                         
                         
                                 <div class="gallery">
                                     
                                         <img src="https://video.bsky.app/watch/did%3Aplc%3Aktijotl6k7kv4s3qxtqvtsis/bafkreihjjy3ajguupcxyle7av65wkmhbwb3mnoi2qekypzd54x5jbt5kq4/thumbnail.jpg" loading="lazy">
-                                        
-                                </div>
-                
-                                
-                    </a>
-                </div>
-                
-                <div class="entryDiv">
-                    <a href="https://bsky.app/profile/perridot.bsky.social/post/3lud6s43qns2w" target="_blank">
-                        
-                        
-                                <div class="gallery">
-                                    
-                                        <img src="https://video.bsky.app/watch/did%3Aplc%3Acbed3kykzdceloye46xyszcb/bafkreic2qqflir7kfofanezlw7wjuhes2gunjk7y2yxug46vgaszf7gly4/thumbnail.jpg" loading="lazy">
                                         
                                 </div>
                 
@@ -3438,8 +3072,6 @@
                         
                                 <div class="gallery">
                                     
-                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:5uojjrquwkyoib6nvkegvgqp/bafkreidrahbtpeyvxyc4z5rggfosi3t4dcauecg3fko55q4xzawchgo5sy@jpeg" loading="lazy">
-                                        
                                         <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:5uojjrquwkyoib6nvkegvgqp/bafkreibyxlgetvazumwkm6takvobopfkse4vdaazd2xytzkc2ajvxn2kke@jpeg" loading="lazy">
                                         
                                         <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:5uojjrquwkyoib6nvkegvgqp/bafkreieen4hr6rxytsp6ro3bqyphfhkbt3secbz3lcpor4jfovfamxzz5u@jpeg" loading="lazy">
@@ -3557,20 +3189,6 @@
                 </div>
                 
                 <div class="entryDiv">
-                    <a href="https://bsky.app/profile/sunlabyrinth.itch.io/post/3luddiascac22" target="_blank">
-                        
-                        
-                                <div class="gallery">
-                                    
-                                        <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:z7mrk2podh6ja2usg2p4iaeu/bafkreih37tvoxggxqlbsycuugjdn2tjmspmyoejykiwue65ezd4dhywdxe@jpeg" loading="lazy">
-                                        
-                                </div>
-                
-                                
-                    </a>
-                </div>
-                
-                <div class="entryDiv">
                     <a href="https://bsky.app/profile/dynamiteflare.bsky.social/post/3lud45orais2v" target="_blank">
                         
                         
@@ -3599,40 +3217,12 @@
                 </div>
                 
                 <div class="entryDiv">
-                    <a href="https://bsky.app/profile/slugglove.bsky.social/post/3ludbk4ae422t" target="_blank">
-                        
-                        
-                                <div class="gallery">
-                                    
-                                        <img src="https://video.bsky.app/watch/did%3Aplc%3At3jccx7bd2aqqxm262ketd4s/bafkreidmoi7wrtphb4yhaz5c3pqxaqyfduez2weijvri7twvnns3e2rkry/thumbnail.jpg" loading="lazy">
-                                        
-                                </div>
-                
-                                
-                    </a>
-                </div>
-                
-                <div class="entryDiv">
                     <a href="https://bsky.app/profile/cultofgalaxy.com/post/3lucl5yxhxk25" target="_blank">
                         
                         
                                 <div class="gallery">
                                     
                                         <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:3fe3v72t65ziroldubgegotu/bafkreifxallkt2wna64psqufsywjiegpgmlo2mc2sq67m4eahoum5yu4zi@jpeg" loading="lazy">
-                                        
-                                </div>
-                
-                                
-                    </a>
-                </div>
-                
-                <div class="entryDiv">
-                    <a href="https://bsky.app/profile/tulipadev.bsky.social/post/3lud5vlmxdc2x" target="_blank">
-                        
-                        
-                                <div class="gallery">
-                                    
-                                        <img src="https://video.bsky.app/watch/did%3Aplc%3Aqs2ab7tpvj2ip5cpo5cotbve/bafkreigaxxqjj54zn7dpwpdzmchb7eywty47f5zvm7arx7ptfgr7ql56vq/thumbnail.jpg" loading="lazy">
                                         
                                 </div>
                 
@@ -3670,50 +3260,59 @@
                 
     </div>
 
-    <!--Extra info -->
-    <div style="color: silver;">
-        <ul>
-            <li>
-                <span>Time Range: </span> <span>19 Jul 2025</span>
-            </li>
-            <li>Total Number of Post: 653+  </li>
-            <li>Number of Post Displayed: 234  </li>
-            <li>
-                <a href="/IndieMushroomForest/IndieDev/SubPages/PostSelectionGuidelines.html">Post Selection Guidelines</a>
-            </li>
-        </ul>
-    </div>
 
 
-    <!-- navigation panel -->
-    <div style="text-align: center;height:50px;">
+    <!-- bottom info panel -->
+    <div class="bottomInfoPanel">
 
-        <span>
-            <a class="link_previous_page"
-               href="/IndieMushroomForest/IndieDev/GallaryPages/2025/07/BlueSky_indiedev_2025_07_18.html" style="color: cyan;margin: 10px;">&lt;&lt; Previous</a>
-        </span>
-        <span>
-            <a href="/IndieMushroomForest/" style="color: cyan;margin: 10px;">Home</a>
-        </span>
-        <span>
-            <a class="link_next_page"
-               href="/IndieMushroomForest/IndieDev/GallaryPages/2025/07/BlueSky_indiedev_2025_07_20.html" style="color: cyan;margin: 10px;">
-                Next &gt;&gt;
+        <!--Extra info -->
+        <div style="color: silver;">
+            <ul>
+                <li>
+                    <span>Time Range: </span> <span>19 Jul 2025</span>
+                </li>
+                <li>Total Number of Post: 653+  </li>
+                <li>Number of Post Displayed: 214  </li>
+                <li>
+                    <a href="/IndieMushroomForest/IndieDev/SubPages/PostSelectionGuidelines.html">Post Selection Guidelines</a>
+                </li>
+            </ul>
+        </div>
+
+
+
+        <!-- navigation panel -->
+        <div style="text-align: center;height:50px;">
+
+            <span>
+                <a class="link_previous_page"
+                   href="/IndieMushroomForest/IndieDev/GallaryPages/2025/07/BlueSky_indiedev_2025_07_18.html" style="color: cyan;margin: 10px;">&lt;&lt; Previous</a>
+            </span>
+            <span>
+                <a href="/IndieMushroomForest/" style="color: cyan;margin: 10px;">Home</a>
+            </span>
+            <span>
+                <a class="link_next_page"
+                   href="/IndieMushroomForest/IndieDev/GallaryPages/2025/07/BlueSky_indiedev_2025_07_20.html" style="color: cyan;margin: 10px;">
+                    Next &gt;&gt;
+                </a>
+            </span>
+        </div>
+
+
+
+
+
+        <!-- Support -->
+        <div style="align-self: center;align-content: center;align-items: center;text-align: right;">
+            <a href="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/SubPages/Support.html"
+               style="text-decoration:none">
+                <img src="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/Resources/Images/Patreon%20logo.png" style="max-width: 20px;border-radius: 5px;">
+                <img src="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/Resources/Images/kofi%20logo.png" style="max-width: 20px;border-radius: 5px;">
+                <img src="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/Resources/Images/paypal%20logo.png" style="max-width: 20px;border-radius: 5px;background-color: white;">
             </a>
-        </span>
-    </div>
+        </div>
 
-
-
-
-    <!-- Support -->
-    <div style="align-self: center;align-content: center;align-items: center;text-align: right;">
-        <a href="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/SubPages/Support.html"
-           style="text-decoration:none">
-            <img src="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/Resources/Images/Patreon%20logo.png" style="max-width: 20px;border-radius: 5px;">
-            <img src="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/Resources/Images/kofi%20logo.png" style="max-width: 20px;border-radius: 5px;">
-            <img src="https://steventreeforest.github.io/IndieMushroomForest/IndieDev/Resources/Images/paypal%20logo.png" style="max-width: 20px;border-radius: 5px;background-color: white;">
-        </a>
     </div>
 
 
@@ -3771,9 +3370,16 @@
         </div>
     </div>
 
+
     <!-- script -->
-    <script src="/IndieMushroomForest/IndieDev/Resources/Javascript/jquery-3.7.1.min.js"></script>
-    <script src="/IndieMushroomForest/IndieDev/Resources/Javascript/SharedLib.min.js?ts=638926073331287711"></script>
-    <script src="/IndieMushroomForest/IndieDev/Resources/Javascript/BlueSky_ImageGallery.min.js?ts=638926073331287711"></script>
+    <div id="scriptGroup">
+
+        <script src="/IndieMushroomForest/IndieDev/Resources/Javascript/jquery-3.7.1.min.js"></script>
+        <script src="/IndieMushroomForest/IndieDev/Resources/Javascript/SharedLib.min.js?ts=638926828526585635"></script>
+        <script src="/IndieMushroomForest/IndieDev/Resources/Javascript/BlueSky_ImageGallery.min.js?ts=638926828526585635"></script>
+
+    </div>
+
+
 </body>
 </html>
