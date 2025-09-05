@@ -5,133 +5,9 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            background-color: #112;
-            min-height: 100vh;
-            color: silver;
-        }
 
-
-        .videoIcon {
-            width: 25px;
-            height: 25px;
-            color: green;
-            position: absolute;
-            left: 0px;
-            bottom: 0px;
-        }
-
-
-
-        .entryContainer {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 10px;
-        }
-
-
-        .entryContainer>div:nth-child(odd) {
-            border: 3px solid #636316;
-        }
-
-        .entryContainer>div:nth-child(even) {
-            border: 3px solid #1d5b2a;
-        }
-
-        .entryDiv {
-            position: relative;
-            gap: 10px;
-            margin: 0px 0px;
-            padding: 10px;
-            max-width: 90vw;
-        }
-
-        .gallery {
-            justify-content: center;
-            align-items: center;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            min-height: 200px;
-        }
-
-        .gallery img {
-            height: auto;
-            display: block;
-            margin: 0 auto;
-            max-height: 80vh;
-            max-width: 100%;
-        }
-
-        .img_thumbnails {
-            max-width: 90vw;
-        }
-
-        .entryDiv:hover .closeIcon {
-            display: block;
-        }
-
-        .closeIcon {
-            width: 25px;
-            height: 25px;
-            position: absolute;
-            right: 0px;
-            top: 0px;
-        }
-
-        .entryDiv:hover .saveIcon {
-            display: block;
-        }
-
-        .saveIcon {
-            width: 25px;
-            height: 25px;
-            position: absolute;
-            right: 0px;
-            top: 0px;
-        }
-
-        @media (min-width: 1000px) {
-
-
-            .entryContainer {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 10px;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .entryDiv {
-                max-width: auto;
-            }
-
-            .gallery {
-                min-height: 250px;
-            }
-
-            .gallery img {
-                height: auto;
-                max-width: 30vw;
-                max-height: 200px;
-                display: block;
-            }
-
-            .closeIcon {
-                display: none;
-            }
-
-            .saveIcon {
-                display: none;
-            }
-        }
-
-        .hiddenResource {
-            display: none;
-            height: 0px;
-        }
-    </style>
+    <!-- <link rel="stylesheet" href="/IndieMushroomForest/IndieDev/Resources/Css/BlueSky_SavedPost_Manage.min.css"> -->
+    <link rel="stylesheet" href="/IndieMushroomForest/IndieDev/Resources/NoPushTempWork/Css/BlueSky_SavedPost_Manage.css">
 
 </head>
 
@@ -149,23 +25,43 @@
             </span>
         </div>
 
-        <div>
-            Number of Saved Posts : <span class="NumSavedPost">---</span>
-        </div>
+
 
         <!-- Data commands-->
-        <div>
+        <div class="table">
+            <div class="row">
+                <span>Number of Saved Posts : </span><span class="NumSavedPost">---</span>
+            </div>
+
             <!-- download button -->
-            <div id="downloadBtn"><button>Download backup file</button></div>
+            <div class="row">
+                <span style="min-width: 170px">Download backup file : </span>
+                <span><button id="downloadBtn">Download</button></span>
+
+            </div>
+
             <!-- upload button -->
-            <span>Upload backup file</span>
-            <input type="file" id="fileInput"  accept=".txt" />
+            <div class="row">
+                <span style="min-width: 170px">Upload backup file : </span>
+                <span>
+                    <input type="file" id="fileInput" accept=".txt" />
+                </span>
+            </div>
+
+
+            <!-- delete saved button -->
+            <div class="row">
+                <span style="min-width: 170px">Delete all saved posts : </span>
+                <span><button id="button_deleteSavedPost">Delete</button></span>
+            </div>
+
+
         </div>
 
 
 
         <!-- edit save posts-->
-        <div>
+        <div style="margin: 20px 0px">
             <div id="panel_SavedPost" class="entryContainer">
 
             </div>
@@ -175,9 +71,7 @@
         <!-- hidden resource -->
         <div class="hiddenResource">
             <div id="Icon_Heart" style="border:1px silver solid;background:black">
-                <svg fill="Gray" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                    enable-background="new 0 0 24 24" xml:space="preserve">
+                <svg fill="Gray" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
 
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -202,44 +96,15 @@
             </svg>
             <div id="example_entryDiv" class="entryDiv">
                 <div class="closeIcon">
-                    <svg version="1.1" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00"
-                        enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
+                    <svg version="1.1" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00" enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c">
                         <use href="#icon-close"></use>
                     </svg>
                 </div>
                 <a href="https://bsky.app/profile/upchuckle.bsky.social/post/3lvhjn2davc2x" target="_blank">
-                    <!-- <div class="videoIcon">
-                        <svg version="1.1" id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/"
-                            xmlns:cc="http://creativecommons.org/ns#"
-                            xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-                            xmlns:svg="http://www.w3.org/2000/svg"
-                            xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-                            xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="video.svg"
-                            inkscape:version="0.48.4 r9939" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -120 1440.00 1440.00"
-                            enable-background="new 0 0 1200 1200" xml:space="preserve" fill="#97ff9c" stroke="#97ff9c"
-                            style="--darkreader-inline-stroke: var(--darkreader-text-97ff9c, #8afe8c); --darkreader-inline-fill: var(--darkreader-text-97ff9c, #8afe8c);"
-                            data-darkreader-inline-stroke="" data-darkreader-inline-fill="">
-                            <g id="SVGRepo_bgCarrier" stroke-width="0">
-                                <rect x="-120" y="-120" width="1440.00" height="1440.00" rx="0" fill="#000000"
-                                    strokewidth="0"
-                                    style="--darkreader-inline-fill: var(--darkreader-text-000000, #ece8e2);"
-                                    data-darkreader-inline-fill=""></rect>
-                            </g>
-                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                            <g id="SVGRepo_iconCarrier">
-                                <path id="path25187" inkscape:connector-curvature="0"
-                                    d="M0,145.898v908.203h1200V145.898H0z M147.144,293.116h905.713v613.77 H147.144V293.116z M465.381,399.977v408.839L818.848,603.81L465.381,399.977z">
-                                </path>
-                            </g>
-                        </svg>
-                    </div> -->
 
 
                     <div class="gallery">
-                        <img
-                            src="https://video.bsky.app/watch/did%3Aplc%3Ayjafvn7w6nfpcfrei6b5bdv2/bafkreifrv75o3arqj4m774hvocxpz2xrir2ivpaduk6apwfpuwkkragziy/thumbnail.jpg">
+                        <img src="https://video.bsky.app/watch/did%3Aplc%3Ayjafvn7w6nfpcfrei6b5bdv2/bafkreifrv75o3arqj4m774hvocxpz2xrir2ivpaduk6apwfpuwkkragziy/thumbnail.jpg">
                     </div>
 
 
@@ -251,9 +116,9 @@
     <!-- script -->
     <script src="/IndieMushroomForest/IndieDev/Resources/Javascript/jquery-3.7.1.min.js"></script>
     <script src="/IndieMushroomForest/IndieDev/Resources/Javascript/SharedLib.min.js?ts=3"></script>
-    <script src="/IndieMushroomForest/IndieDev/Resources/Javascript/BlueSky_SavedPost_Manage.min.js?ts=4"></script>
-    <!-- <script src="/IndieMushroomForest/IndieDev/Resources/NoPushTempWork/SharedLib.js"></script>
-    <script src="/IndieMushroomForest/IndieDev/Resources/NoPushTempWork/BlueSky_SavedPost_Manage.js"></script> -->
+    <!-- <script src="/IndieMushroomForest/IndieDev/Resources/Javascript/BlueSky_SavedPost_Manage.min.js?ts=4"></script> -->
+    <!-- <script src="/IndieMushroomForest/IndieDev/Resources/NoPushTempWork/SharedLib.js"></script>-->
+    <script src="/IndieMushroomForest/IndieDev/Resources/NoPushTempWork/BlueSky_SavedPost_Manage.js"></script>
 
 </body>
 
