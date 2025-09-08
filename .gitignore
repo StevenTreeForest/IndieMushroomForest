@@ -1,4 +1,7 @@
 # Work Temp file
 IndieDev/Resources/NoPushTempWork/
 .svn/
+.vscode/
 jsconfig.json
+.gitignore
+global.d.ts
